@@ -1,0 +1,54 @@
+<h1>New Travel</h1>
+
+<%= form_for(@post) do |f| %>
+
+  <div class="field">
+  	<label class="field-sub">タイトル</label>
+      <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+  	<label class="field-sub">カテゴリー</label>
+      <%= f.text_field :category %>
+  </div>
+
+  <div class="field">
+    <label class="field-sub">国</label>
+      <%= f.select :country, Post.countries.keys %>
+  </div>
+
+  <div class="field">
+  	<label class="field-sub">都道府県名</label>
+   	  <%= f.select :prefectures, Post.prefectures.keys, {prompt: '選択する'} %>
+  </div>
+
+  <div class="field">
+  	<label class="field-sub">都市名</label>
+      <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+  	<label class="field-sub">行った日付</label>
+      <%= f.date_field :date %>
+  </div>
+
+  <div class="field">
+    <label class="field-sub">住所</label>
+      <%= f.text_field :place %>
+  </div>
+
+　<div class="field">
+    <label class="field-sub">写真</label>
+      <%= f.attachment_field :post_images_images, multiple: true  %>
+  </div>
+
+  <div class="field">
+  	<label class="field-sub">内容</label>
+      <%= f.text_area :content, class: "post-new" %>
+  </div>
+
+  <div class="field-tag">
+    <%= f.submit "投稿する" %>
+  </div>
+
+<% end %>

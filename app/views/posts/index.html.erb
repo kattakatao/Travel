@@ -1,0 +1,44 @@
+<div class="Posts-index-main">
+
+  <h1>TABIHAMA</h1>
+
+<%= search_form_for @search, url: posts_path do |f| %>
+
+   <%= f.label :title_cont, 'タイトル' %>
+   <%= f.search_field :title_cont %>
+
+ <%= f.submit '検索' %>
+
+<% end %>
+  <%#= f.label :category_cont, 'カテゴリー' %>
+  <%#= f.search_field :category_cont %>
+
+  <%#= f.label :country_cont, '国' %>
+  <%#= f.search_field :country_cont %>
+
+  <%#= f.label :prefectures_cont, '都道府県' %>
+  <%#= f.search_field :prefectures_cont %>
+
+  <table class="Posts-index">
+	<tr>
+      <th>タイトル</th>
+	</tr>
+
+  <% @posts.each do |t| %>
+
+	<tr>
+	  <td><%= t.title %></td>
+    <%# t.post_images.each_with_index do |image, index| %>
+	  <td><%= attachment_image_tag t.post_images.first, :image, :fill, 100, 100 %></td>
+	</tr>
+
+  </table>
+</div>
+
+    <%# end %>
+ <% end %>
+
+ <%= link_to 'ログアウト', destroy_admin_user_session_path, method: :delete %>
+
+ <%= link_to 'エンドユーザーログアウト', destroy_end_user_session_path, method: :delete %>
+
