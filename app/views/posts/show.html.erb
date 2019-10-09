@@ -50,7 +50,7 @@
      	<div class="comment-body bb">
      		<div class="comment-text">
      			<div class="comment-author clearfix">
-     				<a href="#" class="link-author"><%= post_comment.end_user.name %></a>
+     				<a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></a>
      				<span class="comment-meta">
      					<span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
      				</span>

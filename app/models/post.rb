@@ -3,7 +3,7 @@ class Post < ApplicationRecord
 	has_many :post_images, dependent: :destroy
 	accepts_attachments_for :post_images, attachment: :image
 	has_many :post_comments, dependent: :destroy
-	has_many :replies, class_name: PostComment, foreign_key: :reply_comment, dependent: :destroy
+	#has_many :replies, class_name: PostComment, foreign_key: :reply_comment, dependent: :destroy
 	has_many :favorites, dependent: :destroy
 
 	enum prefectures: {
