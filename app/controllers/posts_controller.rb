@@ -11,6 +11,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post_image = PostImage.find_by(post_id: @post.id)
     @post_comment = PostComment.new
+    #@post_comments = PostComment.includes(:end_user).where(post_id: @post.id)
   end
 
   def new

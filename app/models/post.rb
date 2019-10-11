@@ -5,6 +5,7 @@ class Post < ApplicationRecord
 	has_many :post_comments, dependent: :destroy
 	#has_many :replies, class_name: PostComment, foreign_key: :reply_comment, dependent: :destroy
 	has_many :favorites, dependent: :destroy
+	#has_many :replies, foreign_key: :reply_post_comment, dependent: :destroy
 
 	enum prefectures: {
 		"--未選択--":0,北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,
@@ -52,7 +53,7 @@ class Post < ApplicationRecord
 	}, _prefix: true
 
 
-	def favorited_by?(end_user)
-		favorites.where(end_user_id: end_user.id).exists?
-	end
+	 def favorited_by?(end_user)
+	 	favorites.where(end_user_id: end_user.id).exists?
+	 end
 end

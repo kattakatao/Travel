@@ -1,0 +1,35 @@
+<%= form_for @message, :url => done_path do |f| %>
+  <div>
+  	<h2>お問い合わせ確認</h2>
+   <div>
+   	<strong>お名前</strong>
+   	<p>
+   		<%= f.hidden_field :name %>
+   		<%= @message.name %>
+   	</p>
+   </div>
+   <div>
+   	<strong>メールアドレス</strong>
+   	<p>
+   		<%= f.hidden_field :email %>
+   		<%= @message.email %>
+   	</p>
+   </div>
+   <div>
+   	<strong>カテゴリー</strong>
+   	<p>
+   		<%= f.hidden_field :category %>
+   		<%= @message.category %>
+   	</p>
+   </div>
+   <div>
+   	<strong>お問合せ内容</strong>
+   	<p>
+   		<%= f.hidden_field :content %>
+   		<%= @message.content %>
+   	</p>
+   </div>
+     <%= f.submit '戻る', name: 'back' %>
+     <%= f.submit '送信する' %>
+  </div>
+<% end %>

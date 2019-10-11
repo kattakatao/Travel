@@ -33,40 +33,33 @@
 <% end %>
 
 
-
-<!--<li>
 	<i class="fa fa-comment">
-	<a href="#comments"><%#= @post.post_comments.count %></a>
-</li>-->
-
-<div class="comment_list bt style-2" id="comments">
-	<div class="float-wrapper">
-		<h2 class="comment-count"><%= @post.post_comments.count %>件コメント</h2>
-</div>
+	<a href="#comments"><%= @post.post_comments.count %>件</a>
+</li>
 
 <ol>
   <% @post.post_comments.each do |post_comment| %>
      <li class="comment">
-     	<div class="comment-body bb">
-     		<div class="comment-text">
-     			<div class="comment-author clearfix">
-     				<a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></a>
-     				<span class="comment-meta">
-     					<span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
-     				</span>
-     			  </div>
-     			  <div class="comment-entry"><%= post_comment.comment %></div>
-     			</div>
-     		</div>
-     	</li>
-     	<% end %>
+      <div class="comment-body bb">
+        <div class="comment-text">
+          <div class="comment-author clearfix">
+            <a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></a>
+            <span class="comment-meta">
+              <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
+            </span>
+            </div>
+            <div class="comment-entry"><%= post_comment.comment %></div>
+          </div>
+        </div>
+      </li>
+      <% end %>
      </ol>
 
      <%= form_for [@post, @post_comment] do |f| %>
        <div class="row">
-       	 <div class="col-sm-12">
-       	 	<%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
-       	 </div>
+         <div class="col-sm-12">
+          <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+         </div>
        </div>
        <%= f.submit 'コメントする' %>
      <% end %>
