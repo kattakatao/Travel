@@ -69,14 +69,15 @@ group :development, :test do
  gem 'pry-byebug'
 end
 
+  # 画像アップロード機能
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "jquery-rails"
-
+  # ページネーション機能
 gem 'kaminari', '~> 1.1.1'
-
+  # 検索機能
 gem 'ransack'
 
 gem 'devise'
@@ -89,4 +90,5 @@ gem 'omniauth-instagram'
 
 gem 'dotenv-rails'
 
+gem 'font-awesome-sass'
 

@@ -1,0 +1,171 @@
+	@keyframes move-background {
+		from {
+			-webkit-transform:translate3d(0px, 0px, 0px);
+		}
+		  to {
+			-webkit-transform:translate3d(1000px, 0px, 0px);
+		}
+	  }
+
+	@-webkit-keyframes move-background {
+		from {
+			-webkit-transform: translate3d(0px, 0px, 0px);
+	  }
+	      to {
+	  		-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	@-moz-keyframes move-background {
+	from {
+		-webkit-taransform: translate3d(0px, 0px, 0px);
+	  }
+	  to {
+	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	@-webkit-keyframes move-background {
+	from {
+		-webkit-taransform: translate3d(0px, 0px, 0px);
+	}
+	  to {
+	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	.background-container {
+		position: ficed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.stars {
+		background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		z-index: 0;
+	}
+
+
+	.Sign-up-background {
+		height: 70vh;
+		width: 70vh;
+		position: absolute;
+		z-index: 3;
+		right: 20px;
+	}
+
+	.User-sign-up2 {
+  		position: absolute;/*絶対配置*/
+  		color: white;/*文字は白に*/
+  		top: 10%;
+  		left: 31%;
+  		font-size: 50px;
+	}
+
+	.user-name {
+		position: absolute;
+		color: white;
+		top: 30%;
+		left: 12%;
+		font-size: 30px;
+
+	}
+
+	.user-email {
+		position: absolute;
+		color: white;
+		top: 40%;
+		left: 12%;
+		font-size: 30px;
+	}
+
+	.user-password {
+		position: absolute;
+		color: white;
+		top: 50%;
+		left: 10%;
+		font-size: 30px;
+
+	}
+
+	.user-password-agein {
+		position: absolute;
+		color: white;
+		top: 60%;
+		left: 5%;
+		font-size: 30px;
+	}
+
+	.twitter-sign-up {
+		position: absolute;
+		color: white;
+		top: 70%;
+		left: 7%;
+		font-size: 30px;
+	}
+
+	.google-sign-up {
+		position: absolute;
+		color: white;
+		top: 80%;
+		left: 8%;
+		font-size: 30px;
+	}
+
+	.user-name2 {
+		position: absolute;
+		top: 30%;
+		left: 26%;
+		width: 25%;
+		height: 50px;
+		font-size: 30px;
+		background-color: black;
+		color: white;
+		opacity: 0.5;
+	}
+
+	.user-email2 {
+		position: absolute;
+		top: 40%;
+		left: 26%;
+		width: 25%;
+		height: 50px;
+		font-size: 30px;
+	}
+
+	.user-password2 {
+		position: absolute;
+		top: 50%;
+		left: 26%;
+		width: 25%;
+		height: 50px;
+		font-size: 30px;
+	}
+
+	.user-password-agein2 {
+		position: absolute;
+		top: 60%;
+		left: 26%;
+		width: 25%;
+		height: 50px;
+		font-size: 30px;
+	}
+
+	.user-sign-up-submit {
+		position: absolute;
+		color: white;
+		background-color: black;
+		font-size: 35px;
+		top: 70%;
+		left: 35%;
+		border: none;
+		outline: none;
+	}

@@ -13,9 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.post-new {
-	height: px;
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
 }

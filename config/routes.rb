@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   post 'confirm' => 'messages#confirm'
   post 'done' => 'messages#done'
 
+  get 'about' => 'posts#about'
 end
