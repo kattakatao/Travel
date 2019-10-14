@@ -26,12 +26,16 @@ class PostsController < ApplicationController
   end
 
   def edit
+
   end
 
   def update
   end
 
   def destroy
+    @post = Post.find(patams[:id])
+    @post.destroy
+    redirect_to posts_path
   end
 
   private

@@ -22,4 +22,7 @@ Rails.application.routes.draw do
   post 'done' => 'messages#done'
 
   get 'about' => 'posts#about'
+  get 'about_top' => 'posts#about_top'
+  get 'comment_admin' => 'posts#show'
+  post 'posts/:post_id/post_comments' => 'post_comments#create'
 end

@@ -1,10 +1,11 @@
-class MessageMailer < ActionMailer::Base
+class MessageMailer < ApplicationMailer
 
 	default to: 'kattakatao1018@gmail.com'
 
 	def received_email(message)
 		@message = message
-		mail(subject: 'お客様よりお問い合わせが届きました') do |format|
+		mail(
+			subject: 'お客様よりお問い合わせが届きました') do |format|
 			format.text
 		end
 	end

@@ -16,12 +16,6 @@
 <% end %>
   <%= @post.content %>
 
-  <% if @post.admin_user == current_admin_user %>
-    <%= link_to "削除", post_path(@post), method: :delete %>
-  <% end %>
-
-
-
 
 	<i class="fa fa-comment">
 	<a href="#comments"><%= @post.post_comments.count %>件</a>
@@ -33,7 +27,7 @@
       <div class="comment-body bb">
         <div class="comment-text">
           <div class="comment-author clearfix">
-            <a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></a>
+            <a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %><%= post_comment.admin_user.name %></a>
             <span class="comment-meta">
               <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
             </span>
