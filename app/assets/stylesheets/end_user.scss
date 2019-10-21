@@ -1,176 +1,176 @@
-	@keyframes move-background {
-		from {
-			-webkit-transform:translate3d(0px, 0px, 0px);
-		}
-		  to {
-			-webkit-transform:translate3d(1000px, 0px, 0px);
-		}
-	  }
+	// @keyframes move-background {
+	// 	from {
+	// 		-webkit-transform:translate3d(0px, 0px, 0px);
+	// 	}
+	// 	  to {
+	// 		-webkit-transform:translate3d(1000px, 0px, 0px);
+	// 	}
+	//   }
 
-	@-webkit-keyframes move-background {
-		from {
-			-webkit-transform: translate3d(0px, 0px, 0px);
-	  }
-	      to {
-	  		-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+	// @-webkit-keyframes move-background {
+	// 	from {
+	// 		-webkit-transform: translate3d(0px, 0px, 0px);
+	//   }
+	//       to {
+	//   		-webkit-transform: translate3d(1000px, 0px, 0px);
+	//   }
+	// }
 
-	@-moz-keyframes move-background {
-	from {
-		-webkit-taransform: translate3d(0px, 0px, 0px);
-	  }
-	  to {
-	  	-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+	// @-moz-keyframes move-background {
+	// from {
+	// 	-webkit-taransform: translate3d(0px, 0px, 0px);
+	//   }
+	//   to {
+	//   	-webkit-transform: translate3d(1000px, 0px, 0px);
+	//   }
+	// }
 
-	@-webkit-keyframes move-background {
-	from {
-		-webkit-taransform: translate3d(0px, 0px, 0px);
-	}
-	  to {
-	  	-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+	// @-webkit-keyframes move-background {
+	// from {
+	// 	-webkit-taransform: translate3d(0px, 0px, 0px);
+	// }
+	//   to {
+	//   	-webkit-transform: translate3d(1000px, 0px, 0px);
+	//   }
+	// }
 
-	.background-container {
-		position: ficed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
+	// .background-container {
+	// 	position: ficed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	bottom: 0;
+	// 	right: 0;
+	// }
 
-	.stars {
-		background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		display: block;
-		z-index: 0;
-	}
+	// .stars {
+	// 	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	display: block;
+	// 	z-index: 0;
+	// }
 
 
-	.Sign-up-background {
-		height: 70vh;
-		width: 70vh;
-		position: absolute;
-		z-index: 3;
-		right: 20px;
-		top: 15%;
-	}
+	// .Sign-up-background {
+	// 	height: 70vh;
+	// 	width: 70vh;
+	// 	position: absolute;
+	// 	z-index: 3;
+	// 	right: 20px;
+	// 	top: 15%;
+	// }
 
-	.User-sign-up2 {
-  		position: absolute;/*絶対配置*/
-  		color: white;/*文字は白に*/
-  		top: 10%;
-  		left: 31%;
-  		font-size: 50px;
-  		letter-spacing: 5px;
-	}
+	// .User-sign-up2 {
+ //  		position: absolute;/*絶対配置*/
+ //  		color: white;/*文字は白に*/
+ //  		top: 10%;
+ //  		left: 31%;
+ //  		font-size: 50px;
+ //  		letter-spacing: 5px;
+	// }
 
-	.user-name {
-		position: absolute;
-		color: white;
-		top: 30%;
-		left: 12%;
-		font-size: 30px;
+	// .user-name {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 30%;
+	// 	left: 12%;
+	// 	font-size: 30px;
 
-	}
+	// }
 
-	.user-email {
-		position: absolute;
-		color: white;
-		top: 40%;
-		left: 12%;
-		font-size: 30px;
-	}
+	// .user-email {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 40%;
+	// 	left: 12%;
+	// 	font-size: 30px;
+	// }
 
-	.user-password {
-		position: absolute;
-		color: white;
-		top: 50%;
-		left: 10%;
-		font-size: 30px;
+	// .user-password {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 50%;
+	// 	left: 10%;
+	// 	font-size: 30px;
 
-	}
+	// }
 
-	.user-password-agein {
-		position: absolute;
-		color: white;
-		top: 60%;
-		left: 5%;
-		font-size: 30px;
-	}
+	// .user-password-agein {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 60%;
+	// 	left: 5%;
+	// 	font-size: 30px;
+	// }
 
-	.twitter-sign-up {
-		position: absolute;
-		color: white;
-		top: 70%;
-		left: 7%;
-		font-size: 30px;
-	}
+	// .twitter-sign-up {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 70%;
+	// 	left: 7%;
+	// 	font-size: 30px;
+	// }
 
-	.google-sign-up {
-		position: absolute;
-		color: white;
-		top: 80%;
-		left: 8%;
-		font-size: 30px;
-	}
+	// .google-sign-up {
+	// 	position: absolute;
+	// 	color: white;
+	// 	top: 80%;
+	// 	left: 8%;
+	// 	font-size: 30px;
+	// }
 
-	.user-name2 {
-		position: absolute;
-		top: 30%;
-		left: 26%;
-		width: 25%;
-		height: 50px;
-		font-size: 30px;
-		background-color: black;
-		color: white;
-		opacity: 0.5;
-	}
+	// .user-name2 {
+	// 	position: absolute;
+	// 	top: 30%;
+	// 	left: 26%;
+	// 	width: 25%;
+	// 	height: 50px;
+	// 	font-size: 30px;
+	// 	background-color: black;
+	// 	color: white;
+	// 	opacity: 0.5;
+	// }
 
-	.user-email2 {
-		position: absolute;
-		top: 40%;
-		left: 26%;
-		width: 25%;
-		height: 50px;
-		font-size: 30px;
-	}
+	// .user-email2 {
+	// 	position: absolute;
+	// 	top: 40%;
+	// 	left: 26%;
+	// 	width: 25%;
+	// 	height: 50px;
+	// 	font-size: 30px;
+	// }
 
-	.user-password2 {
-		position: absolute;
-		top: 50%;
-		left: 26%;
-		width: 25%;
-		height: 50px;
-		font-size: 30px;
-	}
+	// .user-password2 {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 26%;
+	// 	width: 25%;
+	// 	height: 50px;
+	// 	font-size: 30px;
+	// }
 
-	.user-password-agein2 {
-		position: absolute;
-		top: 60%;
-		left: 26%;
-		width: 25%;
-		height: 50px;
-		font-size: 30px;
-	}
+	// .user-password-agein2 {
+	// 	position: absolute;
+	// 	top: 60%;
+	// 	left: 26%;
+	// 	width: 25%;
+	// 	height: 50px;
+	// 	font-size: 30px;
+	// }
 
-	.user-sign-up-submit {
-		position: absolute;
-		color: white;
-		background-color: black;
-		font-size: 35px;
-		top: 70%;
-		left: 35%;
-		border: none;
-		outline: none;
-	}
+	// .user-sign-up-submit {
+	// 	position: absolute;
+	// 	color: white;
+	// 	background-color: black;
+	// 	font-size: 35px;
+	// 	top: 70%;
+	// 	left: 35%;
+	// 	border: none;
+	// 	outline: none;
+	// }
 
 	// .box {
 	// 	width: 1000px;
@@ -285,18 +285,23 @@ a {
 //   align-items: center;
 // }
 
-.user-log-in-main {
+
+//ユーザーサインアップ画面//
+
+#Sign-up {
+	overflow: hidden;
 	width: 100%;
-	height: 962px;
 	background-color: black;
 }
 
 .box {
-  width: 500px;
-  height: 500px;
+  margin-top: 200px;
+  width: 1000px;
+  height: 1000px;
   border-radius: 5px;
+  border: 1em  solid #FF66FF;
   box-shadow: 0 2px 30px rgba(black, .2);
-  background: lighten(#f0f4c3, 15%);
+  background: black;
   position: relative;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
@@ -310,7 +315,7 @@ a {
   position: absolute;
   top: 3%;
   left: 50%;
-  background: #0af;
+  background: aqua;
   width: 500px;
   height: 500px;
   margin-left: -250px;
@@ -322,12 +327,13 @@ a {
 
 .wave.-three {
   animation: drift 5000ms infinite linear;
+  //background: red;
 }
 
 .wave.-two {
   animation: drift 7000ms infinite linear;
   opacity: .1;
-  background: yellow;
+  background: white;
 }
 
 .box:after {
@@ -336,8 +342,185 @@ a {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  height: 100px;
+  //background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+.title {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  line-height: 300px;
+  text-align: center;
+  transform: translate3d(0, 0, 0);
+  color: white;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 24px;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+}
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+.user-name {
+	position: absolute;
+	left: 7%;
+	top: 55%;
+	font-size: 20px;
+	color: white;
+}
+
+.user-name2 {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	width: 200px;
+	z-index: 2;
+}
+
+.user-email {
+	position: absolute;
+	left: 7%;
+	top: 65%;
+	font-size: 20px;
+	color: white;
+}
+
+.user-email2 {
+	position: absolute;
+	top: 65%;
+	left: 50%;
+	width: 200px;
+	z-index: 2;
+}
+
+.user-password {
+	position: absolute;
+	left: 7%;
+	top: 75%;
+	font-size: 20px;
+	color: white;
+}
+
+.user-password2 {
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	width: 200px;
+}
+
+.user-password-agein {
+	position: absolute;
+	left: 7%;
+	top: 85%;
+	font-size: 20px;
+	color: white;
+}
+
+.user-password-agein2 {
+	position: absolute;
+	top: 85%;
+	left: 50%;
+	width: 200px;
+}
+
+.facebook-sign-up {
+	position: absolute;
+	top: 93%;
+	left: 7%;
+	font-size: 20px;
+	color: white;
+}
+
+.google-sign-up {
+	position: absolute;
+	top: 93%;
+	left: 47%;
+	font-size: 20px;
+	color: white;
+}
+
+
+.user-sign-up-submit {
+	position: absolute;
+	top: 94%;
+	left: 85%;
+	font-size: 15px;
+
+}
+
+//ユーザーログイン画面//
+
+#log-in {
+	overflow: hidden;
+	width: 100%;
+	background-color: black;
+}
+
+.user-log-in-main {
+	width: 100%;
+	height: 962px;
+	background-color: black;
+}
+
+.box {
+  margin-top: 200px;
+  width: 500px;
+  height: 500px;
+  border-radius: 5px;
+  border: 1em  solid #FF66FF;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: black;
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  text-align: center;
+  left: 37%;
+  top: 25%;
+}
+
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: aqua;
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
+}
+
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+  //background: red;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: white;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  //background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
   z-index: 11;
   transform: translate3d(0, 0, 0);
 }
@@ -366,75 +549,84 @@ a {
 
 .Log-in-name {
 	position: absolute;
+	left: 7%;
 	top: 55%;
-	right: 55%;
 	font-size: 20px;
+	color: white;
 }
 
 .Log-in-name2 {
 	position: absolute;
 	top: 55%;
-	right: 43%;
+	left: 50%;
 	width: 200px;
+	z-index: 2;
 }
 
 .Log-in-password {
 	position: absolute;
-	top: 59%;
-	right: 55%;
+	left: 7%;
+	top: 63%;
 	font-size: 20px;
+	color: white;
 }
 
 .Log-in-password2 {
 	position: absolute;
-	top: 59%;
-	right: 43%;
+	top: 63%;
+	left: 50%;
 	width: 200px;
 }
 
 .twitter-log-in {
 	position: absolute;
-	top: 67%;
-	right: 55%;
+	top: 78%;
+	left: 7%;
 	font-size: 20px;
+	color: white;
 }
 
 .google-log-in {
 	position: absolute;
-	top: 70%;
-	right: 55%;
+	top: 85%;
+	left: 7%;
 	font-size: 20px;
+	color: white;
 }
 
 .password-remember {
 	position: absolute;
-	top: 63%;
-	right: 53%;
+	top: 71%;
+	left: 50%;
 }
 
 .password-remember2 {
 	position: absolute;
-	top: 63%;
-	right: 55%;
+	top: 70%;
+	left: 7%;
 	font-size: 20px;
+	color: white;
 }
 
 .user-log-in-submit {
 	position: absolute;
-	top: 64%;
-	right: 43%;
+	top: 75%;
+	left: 90%;
+
 }
 
 .Forgot-your-password {
 	position: absolute;
-	top: 74%;
-	right: 37%;
+	top: 95%;
+	left: 60%;
 	font-size: 17px;
+	color: white;
 }
 
 .Sign-up {
 	position: absolute;
-	top: 73%;
-	right: 55%;
+	top: 92%;
+	left: 7%;
 	font-size: 20px;
+	color: white;
 }

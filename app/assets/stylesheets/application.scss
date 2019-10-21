@@ -18,9 +18,159 @@
 @import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "slick-theme";
+@import "slick";
 
 * {
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+}
+
+.drawer-hamburger-icon {
+	color: white;
+}
+
+.drawer-toggle .drawer-hamburger {
+	color: white;
+	background-color: white;
+}
+
+.sr-only {
+	color: white;
+	background-color: white;
+}
+
+.banner {
+	color: white;
+	background-color: white;
+}
+
+.drawer .drawer--left {
+	color: white;
+	background-color: white;
+}
+
+.drawer-nav {
+	text-align: center;
+	color: black;
+}
+
+.drawer-title {
+	font-size: 25px;
+	letter-spacing: 3px;
+	color: white;
+	padding-top: 80%;
+}
+
+.drawer-home {
+	padding-top: 5px;
+}
+
+.drawer-home2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.drawer-home2:hover {
+	color: black;
+}
+
+.drawer-about-top {
+	padding-top: 5px;
+}
+
+.drawer-about-top2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.drawer-about-top2:hover {
+	color: black;
+}
+
+.drawer-about {
+	padding-top: 5px;
+}
+
+.drawer-about2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 3px;
+}
+
+.drawer-about2:hover {
+	color: black;
+}
+
+.drawer-posts {
+	padding-top: 5px;
+}
+
+.drawer-posts2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.drawer-posts2:hover {
+	color: black;
+}
+
+.drawer-index {
+	padding-top: 5px;
+}
+
+.drawer-index2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.drawer-index2:hover {
+	color: black;
+}
+
+.drawer-log-in {
+	padding-top: 5px;
+}
+
+.drawer-log-in2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.drawer-log-in2:hover {
+	color: black;
+}
+
+.drawer-log-out {
+	padding-top: 5px;
+}
+
+.drawer-log-out2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.drawer-log-out2:hover {
+	color: black;
+}
+
+.drawer-sign-up {
+	padding-top: 5px;
+}
+
+.drawer-sign-up2 {
+	font-size: 15px;
+	color: white;
+	letter-spacing: 5px;
+}
+
+.drawer-sign-up2:hover {
+	color: black;
 }

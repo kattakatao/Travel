@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
     @search = Post.ransack(params[:q])
-    @posts = @search.result
+    @posts = @search.result(distinct: true)
     #@post_image = PostImage.find_by(post_id: @post.id)
     #@post_image = PostImage.find_by(post_id: @post.id)
   end

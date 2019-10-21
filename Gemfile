@@ -92,3 +92,4 @@ gem 'dotenv-rails'
 
 gem 'font-awesome-sass'
 
+gem 'enum_help', '~> 0.0.15'

@@ -1,3 +1,322 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//背景画像&月、星、雲//
+@keyframes move-background {
+		from {
+			-webkit-transform:translate3d(0px, 0px, 0px);
+		}
+		  to {
+			-webkit-transform:translate3d(1000px, 0px, 0px);
+		}
+	  }
+
+	@-webkit-keyframes move-background {
+		from {
+			-webkit-transform: translate3d(0px, 0px, 0px);
+	  }
+	      to {
+	  		-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	@-moz-keyframes move-background {
+	from {
+		-webkit-taransform: translate3d(0px, 0px, 0px);
+	  }
+	  to {
+	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	@-webkit-keyframes move-background {
+	from {
+		-webkit-taransform: translate3d(0px, 0px, 0px);
+	}
+	  to {
+	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+	  }
+	}
+
+	.background-container {
+		position: ficed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.stars {
+		background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		z-index: 0;
+	}
+
+// 	.twinkling {
+// 		width: 10000px;
+// 		height: 100%;
+// 		background: transparent
+// 		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png")
+// 		repeat;
+// 		background-size: 1000px 1000px;
+// 		position: absolute;
+// 		right: 0;
+// 		top: 0;
+// 		bottom: 0;
+// 		z-index: 2;
+
+// 		-moz-animation:move-background 70s linear infinite;
+//   -ms-animation:move-background 70s linear infinite;
+//   -o-animation:move-background 70s linear infinite;
+//   -webkit-animation:move-background 70s linear infinite;
+//   animation:move-background 70s linear infinite;
+
+// }
+
+// .clouds{
+//     width:10000px;
+//     height: 100%;
+//     background: transparent url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/clouds_repeat.png") repeat;
+//     background-size: 1000px 1000px;
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+//     bottom: 0;
+//     z-index: 3;
+//     opacity: 0.5;
+
+//    -moz-animation:move-background 150s linear infinite;
+//   -ms-animation:move-background 150s linear infinite;
+//   -o-animation:move-background 150s linear infinite;
+//   -webkit-animation:move-background 150s linear infinite;
+//   animation:move-background 150s linear infinite;
+// }
+
+// img{
+//   height: 70vh;
+//   width:70vh;
+//   position: absolute;
+//   z-index: 3;
+//   right: 20px;
+// }
+
+
+	.info-background {
+		height: 70vh;
+		width: 70vh;
+		position: absolute;
+		z-index: 3;
+		right: 20px;
+		top: 15%;
+	}
+
+	.info-title2 {
+  		position: absolute;/*絶対配置*/
+  		color: white;/*文字は白に*/
+  		top: 10%;
+  		left: 26%;
+  		font-size: 50px;
+  		letter-spacing: 5px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+//
+
+#Travel2 {
+	overflow: hidden;
+}
+
+.info-name {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 30%;
+	left: 15%;
+	letter-spacing: 5px;
+}
+
+.info-name2 {
+	position: absolute;
+	top: 30%;
+	left: 27%;
+	width: 300px;
+	height: 50px;
+	z-index: 4;
+	font-size: 20px;
+}
+
+.info-name3 {
+	position: absolute;
+	top: 31%;
+	left: 27%;
+	font-size: 20px;
+	color: white;
+}
+
+.info-email {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 39%;
+	left: 11%;
+	letter-spacing: 5px;
+}
+
+.info-email2 {
+	position: absolute;
+	top: 38%;
+	left: 27%;
+	width: 300px;
+	height: 50px;
+	z-index: 4;
+	font-size: 20px;
+}
+
+.info-email3 {
+	position: absolute;
+	top: 39%;
+	left: 27%;
+	font-size: 20px;
+	color: white;
+}
+
+.info-category {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 48%;
+	left: 10%;
+	letter-spacing: 5px;
+}
+
+.info-category2 {
+	position: absolute;
+	top: 48%;
+	left: 27%;
+	width: 300px;
+	height: 50px;
+	z-index: 4;
+	font-size: 20px;
+}
+
+.info-category3 {
+	position: absolute;
+	top: 49%;
+	left: 27%;
+	font-size: 20px;
+	color: white;
+}
+
+.info-category4 {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 48%;
+	left: 10%;
+	letter-spacing: 5px;
+}
+
+
+.info-text {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 56%;
+	left: 10%;
+	letter-spacing: 5px;
+}
+
+.info-text2 {
+	position: absolute;
+	top: 56%;
+	left: 27%;
+	width: 600px;
+	height: 400px;
+	z-index: 4;
+	font-size: 20px;
+}
+
+.info-text3 {
+	position: absolute;
+	top: 57%;
+	left: 27%;
+	font-size: 20px;
+	color: white;
+	font-size: 20px;
+}
+
+.info-text4 {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 56%;
+	left: 12%;
+	letter-spacing: 5px;
+}
+
+.info-submit {
+	position: absolute;
+	top: 94%;
+	left: 63%;
+	z-index: 4;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	letter-spacing: 5px;
+	border: none;
+	outline: none;
+}
+
+.info-back {
+	position: absolute;
+	top: 94%;
+	left: 59%;
+	z-index: 4;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	letter-spacing: 5px;
+	border: none;
+	outline: none;
+}
+
+
+//お問い合わせ完了画面//
+
+@-webkit-keyframes typing { from { width: 0;} }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.done3 {
+	color: white;
+	position: absolute;
+	font-size: 20px;
+}
+
+.done2 {
+	font: bold 300% Consolas, Monaco, monospace;
+	border-right: .1em solid white;
+	width: 16.5em;
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 7s steps(10, end),
+				blink-caret .5s step-end infinite alternate;
+	position: absolute;
+	color: white;
+ 	}

@@ -19,7 +19,7 @@ class MessagesController < ApplicationController
 			render :action => 'index'
 		else
 			MessageMailer.received_email(@message).deliver_now
-      		render :action => 'done'
+      		 render :action => 'done'
 			# MessageMailer.received_email(@message).deliver_now
 			# render :action => 'done'
 		end
