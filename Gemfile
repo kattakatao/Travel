@@ -61,14 +61,23 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+group :development, :test do
+ gem 'hirb'         # モデルの出力結果を表形式で表示するGem
+ gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
+ gem 'pry-rails'
+ gem 'pry-doc'
+ gem 'pry-byebug'
+end
+
+  # 画像アップロード機能
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem "jquery-rails"
-
+  # ページネーション機能
 gem 'kaminari', '~> 1.1.1'
-
+  # 検索機能
 gem 'ransack'
 
 gem 'devise'
@@ -76,5 +85,11 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+gem 'instagram'
+gem 'omniauth-instagram'
 
-gem 'pry-rails'
+gem 'dotenv-rails'
+
+gem 'font-awesome-sass'
+
+gem 'enum_help', '~> 0.0.15'

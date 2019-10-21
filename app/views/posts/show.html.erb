@@ -1,74 +1,111 @@
-<h1>Posts#show</h1>
-<p>Find me in app/views/posts/show.html.erb</p>
+<body id="Post-show">
+
+  <div class="Travel-show-title">
+    <h1>TABIHAMA</h1>
+  </div>
+
+  <div class="Post-slide">
+    <ul id="slider">
+
+      <% @post.post_images.each do |image| %>
+          <li class="slide-item"><%= attachment_image_tag image, :image %></li>
+      <% end %>
+    </ul>
+    <ul id="thumbnail_slider">
+      <% @post.post_images.each do |image| %>
+          <li class="slide-item"><%= attachment_image_tag image, :image %></li>
+
+      <% end %>
+    </ul>
+
+  </div>
 
 
-  <%= @post.title %>
-  <%= @post.category %>
-  <%= @post.country %>
-  <%= @post.prefectures %>
-  <%= @post.city %>
-  <%= @post.place %>
-  <%= @post.date %>
-<% @post.post_images.each do |image| %>
-	<tr>
-	  <td><%= attachment_image_tag image, :image, :fill, 100, 100 %></td>
-	</tr>
-<% end %>
-  <%= @post.content %>
 
-<% if @post.favorited_by?(current_end_user) %>
- <li>
-  <%= link_to post_favorites_path(@post), method: :delete do %>
-   <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-   <%= @post.favorites.count %> 👍
+<table class="Post-show-list">
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">タイトル</th>
+    <td class="Post-show-td"><%= @post.title %></td>
+  </tr>
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">カテゴリー</th>
+    <td class="Post-show-td"><%= @post.category %></td>
+  </tr>
+
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">国</th>
+    <td class="Post-show-td"><%= @post.country %></td>
+  </tr>
+
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">都道府県</th>
+    <td class="Post-show-td"><%= @post.prefectures %></td>
+  </tr>
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">都市</th>
+    <td class="Post-show-td"><%= @post.city %></td>
+  </tr>
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">場所</th>
+    <td class="Post-show-td"><%= @post.place %></td>
+  </tr>
+
+  <tr class="Post-show-tr">
+    <th class="Post-show-th">日付</th>
+    <td class="Post-show-td"><%= @post.date %></td>
+  </tr>
+
+  <div class="Post-show-content">
+    <%= simple_format (@post.content) %>
+  </div>
+
+</table>
+
+
+
+  <% if @post.admin_user == current_admin_user %>
+    <%= link_to "削除", post_path(@post), method: :delete %>
   <% end %>
- </li>
-<% else %>
- <li>
-  <%= link_to post_favorites_path(@post), method: :post do %>
-   <i class="fa fa-heart-o" aria-hidden="true"></i>
-   <%= @post.favorites.count %> 👍
-  <% end %>
- </li>
-<% end %>
 
 
 
-<!--<li>
+
+
 	<i class="fa fa-comment">
-	<a href="#comments"><%#= @post.post_comments.count %></a>
-</li>-->
+	<p class="comments-count"><%= @post.post_comments.count %>件</a>
+</li>
 
-<div class="comment_list bt style-2" id="comments">
-	<div class="float-wrapper">
-		<h2 class="comment-count"><%= @post.post_comments.count %>件コメント</h2>
-</div>
-
-<ol>
+<ol class="post-comment">
   <% @post.post_comments.each do |post_comment| %>
      <li class="comment">
-     	<div class="comment-body bb">
-     		<div class="comment-text">
-     			<div class="comment-author clearfix">
-     				<a href="#" class="link-author"><%= post_comment.end_user.name %></a>
-     				<span class="comment-meta">
-     					<span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
-     				</span>
-     			  </div>
-     			  <div class="comment-entry"><%= post_comment.comment %></div>
-     			</div>
-     		</div>
-     	</li>
-     	<% end %>
+      <div class="comment-body bb">
+        <div class="comment-text">
+          <div class="comment-author clearfix">
+             <span class="comment-meta">
+              <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
+            </span>
+
+            <!-- <a href="# --><p class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></p>
+            </div>
+            <div class="comment-entry"><%= post_comment.comment %></div>
+          </div>
+        </div>
+      </li>
+      <% end %>
      </ol>
 
      <%= form_for [@post, @post_comment] do |f| %>
        <div class="row">
-       	 <div class="col-sm-12">
-       	 	<%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
-       	 </div>
+         <div class="col-sm-12">
+          <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+         </div>
        </div>
-       <%= f.submit 'コメントする' %>
+       <%= f.submit 'コメントする', class: "comment-submit" %>
      <% end %>
 
-      <%= link_to 'ログアウト', destroy_end_user_session_path, method: :delete %>
+  </body>

@@ -1,13 +1,15 @@
-<div class="Posts-index-main">
+<body id="Travel-index">
 
-  <h1>TABIHAMA</h1>
+  <div class="Travel-index-title">
+    <h1>TABIHAMA</h1>
+  </div>
 
 <%= search_form_for @search, url: posts_path do |f| %>
 
-   <%= f.label :title_cont, 'タイトル' %>
-   <%= f.search_field :title_cont %>
+   <%= f.label "検索する場合はこちら", class: "ransack" %>
+   <%= f.search_field :title_or_country_cont, class: "ransack2" %>
 
- <%= f.submit '検索' %>
+ <%= f.submit '検索', class: "ransack-submit" %>
 
 <% end %>
   <%#= f.label :category_cont, 'カテゴリー' %>
@@ -19,26 +21,34 @@
   <%#= f.label :prefectures_cont, '都道府県' %>
   <%#= f.search_field :prefectures_cont %>
 
-  <table class="Posts-index">
-	<tr>
-      <th>タイトル</th>
-	</tr>
-
   <% @posts.each do |t| %>
 
+
+
+  <table class="Posts-index2">
+
 	<tr>
-	  <td><%= t.title %></td>
-    <%# t.post_images.each_with_index do |image, index| %>
-	  <td><%= attachment_image_tag t.post_images.first, :image, :fill, 100, 100 %></td>
+      <td class="Post-image"><%= link_to(post_path(t), class: "Post-image3", data: {"turbolinks" => false} ) do %><%= attachment_image_tag t.post_images.first, :image, :fill, 200, 200, class: "Post-image2" %>
+        <% end %>
+      </td>
+
+	    <td class="Post-title"><%= link_to(post_path(t), class: "Post-title2", data: {"turbolinks" => false}) do %><%= t.title %><% end %></td>
+
+      <td class="Post-country"><%= t.country %></td>
+
+      <td class="Post-prefectures"><%= t.prefectures %></td>
+
+      <td class="Post-date"><%= t.date %></td>
+
 	</tr>
 
+
   </table>
-</div>
+<!-- </div> -->
+<% end %>
 
     <%# end %>
- <% end %>
 
  <%= link_to 'ログアウト', destroy_admin_user_session_path, method: :delete %>
 
- <%= link_to 'エンドユーザーログアウト', destroy_end_user_session_path, method: :delete %>
-
+</body>

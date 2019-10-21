@@ -17,4 +17,12 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
 
+  get 'index' => 'messages#index'
+  post 'confirm' => 'messages#confirm'
+  post 'done' => 'messages#done'
+
+  get 'about' => 'posts#about'
+  get 'about_top' => 'posts#about_top'
+  get 'comment_admin' => 'posts#show'
+  post 'posts/:post_id/post_comments' => 'post_comments#create'
 end

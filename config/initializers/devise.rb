@@ -297,8 +297,9 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-  config.omniauth :facebook, ENV['510376993146961'], ENV['4c210b8c2ccdeaf3fb03850fc94fba4c'], scope: 'email', info_fields: 'email', callback_url: "#{ENV['HOST']}/end_users/auth/facebook/callback"
-  config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], scope: 'email', oauth_callback: "#{ENV['HOST']}/end_users/auth/twitter/callback"
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], scope: 'email', redirect_uri: "#{ENV['HOST']}/end_users/auth/google_oauth2/callback"
-  OmniAuth.config.logger = Rails.logger if Rails.env.development?
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']  #, scope: 'email', info_fields: 'email', callback_url: "#{ENV['HOST']}/end_users/auth/facebook/callback"
+  #config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], scope: 'email', oauth_callback: "#{ENV['HOST']}/end_users/auth/twitter/callback"
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], skip_jwt: true#, scope: 'email', redirect_uri: "#{ENV['HOST']}/end_users/auth/google_oauth2/callback"
+  #OmniAuth.config.logger = Rails.logger if Rails.env.development?
+  config.omniauth :instagram, ENV['CLIENT_ID'], ENV['CLIENT_STATUS']
 end

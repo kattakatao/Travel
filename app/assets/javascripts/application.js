@@ -15,3 +15,52 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+// $(function(){
+//  var mainSlider = "#slider"; //メインスライダーid
+//  var thumbnailSlider = "#thumbnail_slider"; //サムネイルスライダーid
+
+//   $(mainSlider).slick({
+//     autoplay: true,
+//     speed: 1000,
+//     arrows: false,
+//     asNavFor: thumbnailSlider
+//   });
+//   $(thumbnailSlider).slick({
+//     slidesToShow: 3,
+//     speed: 1000,
+//     asNavFor: mainSlider
+//   });
+//   //#thumbnail_sliderでクリックしたスライドをカレントにする
+//   $(thumbnailSlider+" .slick-slide").on('click',function(){
+//     var index = $(this).attr("data-slick-index");
+//     $(thumbnailSlider).slick("slickGoTo",index,false);
+//   });
+// });
+
+$(function(){
+  var mainSlider = "#slider";
+  var thumbnailSlider = "#thumbnail_slider";
+
+  $(mainSlider).slick({
+    autoplay: true,
+    speed: 1000,
+    arrows: false,
+    asNavFor: thumbnailSlider
+  });
+  $(thumbnailSlider).slick({
+    slidesToShow: 3,
+    speed: 1000,
+    asNavFor: mainSlider
+  });
+  $(thumbnailSlider+" .slick-slide").on('click', function(){
+    var index = $(this).attr("data-slick-index");
+    $(thumbnailSlider).slick("slickGoTo", index,false);
+  });
+});
+
+
+
+$(document).ready(function() {
+  $('.drawer').drawer();
+});

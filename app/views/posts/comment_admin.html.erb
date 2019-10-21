@@ -1,0 +1,51 @@
+<h1>Posts#show</h1>
+<p>Find me in app/views/posts/show.html.erb</p>
+
+
+  <%= @post.title %>
+  <%= @post.category %>
+  <%= @post.country %>
+  <%= @post.prefectures %>
+  <%= @post.city %>
+  <%= @post.place %>
+  <%= @post.date %>
+<% @post.post_images.each do |image| %>
+	<tr>
+	  <td><%= attachment_image_tag image, :image, :fill, 100, 100 %></td>
+	</tr>
+<% end %>
+  <%= @post.content %>
+
+
+	<i class="fa fa-comment">
+	<a href="#comments"><%= @post.post_comments.count %>件</a>
+</li>
+
+<ol>
+  <% @post.post_comments.each do |post_comment| %>
+     <li class="comment">
+      <div class="comment-body bb">
+        <div class="comment-text">
+          <div class="comment-author clearfix">
+            <a href="#" class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %><%= post_comment.admin_user.name %></a>
+            <span class="comment-meta">
+              <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
+            </span>
+            </div>
+            <div class="comment-entry"><%= post_comment.comment %></div>
+          </div>
+        </div>
+      </li>
+      <% end %>
+     </ol>
+
+     <%= form_for [@post, @post_comment] do |f| %>
+       <div class="row">
+         <div class="col-sm-12">
+          <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+         </div>
+       </div>
+       <%= f.submit 'コメントする' %>
+     <% end %>
+
+      <%= link_to 'ログアウト', destroy_end_user_session_path, method: :delete %>
