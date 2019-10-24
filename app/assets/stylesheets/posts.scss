@@ -64,8 +64,8 @@
 }
 
 .Posts-index2 {
-	border: 1px solid white;
-	border-radius: 15px;
+	// border: 1px solid white;
+	// border-radius: 15px;
 	margin: 0 auto;
 	margin-top: 20px;
 }
@@ -104,6 +104,20 @@
 	color: white;
 	padding: 20px;
 	font-size: 20px;
+}
+
+.paginate {
+	text-align: center;
+}
+
+.pagination {
+	font-size: 20px;
+	color: white;
+}
+
+.page a {
+	font-size: 20px;
+	color: white;
 }
 
 //投稿詳細画面//

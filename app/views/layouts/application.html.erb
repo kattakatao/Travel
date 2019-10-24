@@ -56,13 +56,18 @@
         <li class="drawer-index"><%= link_to 'お問い合わせ', index_path, class: "drawer-index2", data: {"turbolinks" => false} %></li>
 
         <% if end_user_signed_in? %>
-            <li class="drawer-log-out">
-              <%= link_to 'ログアウト', destroy_end_user_session_path, class: "drawer-log-out2", data: {"turbolinks" => false}, method: :delete %>
+            <li class="drawer-mypage"><%= link_to 'マイページ', end_user_path(current_end_user.id), class: "drawer-mypage2", data: {"turbolinks" => false} %></li>
+            <li class="drawer-log-out"><%= link_to 'ログアウト', destroy_end_user_session_path, class: "drawer-log-out2", data: {"turbolinks" => false}, method: :delete %></li>
          <% else %>
             <li class="drawer-log-in"><%= link_to 'ログイン', end_user_session_path, class: "drawer-log-in2", data: {"turbolinks" => false} %></li>
+            <li class="drawer-sign-up"><%= link_to '新規登録',  new_end_user_registration_path, class: "drawer-sign-up2", data: {"turbolinks" => false} %></li>
         <% end %>
 
-        <li class="drawer-sign-up"><%= link_to '新規登録',  new_end_user_registration_path, class: "drawer-sign-up2", data: {"turbolinks" => false} %></li>
+        <% if admin_user_signed_in? %>
+            <li class="drawer-log-out"><%= link_to 'ログアウト', destroy_admin_user_session_path, class: "drawer-log-out2", data: {"turbolinks" => false}, method: :delete %></li>
+         <% else %>
+            <li class="drawer-log-in"><%= link_to '管理者ログイン', admin_user_session_path, class: "drawer-log-in2", data: {"turbolinks" => false} %></li>
+        <% end %>
 
       </ul>
     </nav>

@@ -69,8 +69,25 @@
 
 
   <% if @post.admin_user == current_admin_user %>
+    <%= link_to "編集", edit_post_path(@post) %>
     <%= link_to "削除", post_path(@post), method: :delete %>
   <% end %>
+
+  <% if @post.favorited_by?(current_end_user) %>
+ <li>
+  <%= link_to post_favorites_path(@post), method: :delete do %>
+   <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+   <%= @post.favorites.count %> 👍
+  <% end %>
+ </li>
+<% else %>
+ <li>
+  <%= link_to post_favorites_path(@post), method: :post do %>
+   <i class="fa fa-heart-o" aria-hidden="true"></i>
+   <%= @post.favorites.count %> 👍
+  <% end %>
+ </li>
+<% end %>
 
 
 
@@ -90,7 +107,7 @@
               <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
             </span>
 
-            <!-- <a href="# --><p class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></p>
+            <p class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></p>
             </div>
             <div class="comment-entry"><%= post_comment.comment %></div>
           </div>
@@ -99,6 +116,7 @@
       <% end %>
      </ol>
 
+     <% if end_user_signed_in? %>
      <%= form_for [@post, @post_comment] do |f| %>
        <div class="row">
          <div class="col-sm-12">
@@ -107,5 +125,17 @@
        </div>
        <%= f.submit 'コメントする', class: "comment-submit" %>
      <% end %>
+     <% end %>
+<!--
+     <%# if admin_user_signed_in? %>
+     <%#= form_for  [@post, @post_comment] do |f| %>
+      <div class="row">
+         <div class="col-sm-12">
+          <%#= f.text_area :reply_post_comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+         </div>
+       </div>
+       <%#= f.submit 'コメントする', class: "comment-submit" %>
+     <%# end %>
+     <%# end %> -->
 
   </body>

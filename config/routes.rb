@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'end_users/show'
   devise_for :admin_users, controllers: {
   	sessions: 'admin_users/sessions',
   	passwords: 'admin_users/passwords',
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
     registrations: 'end_users/registrations',
     omniauth_callbacks: 'end_users/omniauth_callbacks'
   }
+
+  resources :end_users, :only => [:show]
 
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
   	resource :favorites, only: [:create, :destroy]

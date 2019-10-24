@@ -7,11 +7,34 @@
 <%= search_form_for @search, url: posts_path do |f| %>
 
    <%= f.label "検索する場合はこちら", class: "ransack" %>
-   <%= f.search_field :title_or_country_cont, class: "ransack2" %>
+   <%= f.search_field :title_cont, class: "ransack2" %>
+
+   <!--  <%#= f.select :prefectures, Post.prefectures_i18n.invert.map{|key, value| [key, Post.prefectures[value]]} %> -->
+
+   <%#=f.select :country_eq, Post.countries.map{|k, v| [Post.countries_i18n[k], v]} %>
 
  <%= f.submit '検索', class: "ransack-submit" %>
 
+<%# end %>
+
+<%#= search_form_for @q do |f| %>
+<!-- <table class="table">
+  <tr>
+    <td>
+      <%#= f.label :country_in,
+        t('activerecord.attributes.post.country'),
+        class: 'mr-1' %>
+    <td class="form-inline"> -->
+      <%#= f.collection_check_boxes :country_in, Post.countries, :last, :first do |b| %>
+        <!--  .form-check.form-check-inline.ml-3  -->
+          <%#= b.label class: 'form-check-label mb-1' do %>
+          <%#= b.select(class: "form-check-input mr-2") %>
+          <%#= Post.countries_i18n[b.object.send(:first)] %>
+<%# end %>
+<%# end %>
 <% end %>
+
+
   <%#= f.label :category_cont, 'カテゴリー' %>
   <%#= f.search_field :category_cont %>
 
@@ -25,7 +48,7 @@
 
 
 
-  <table class="Posts-index2">
+  <table class="Posts-index2" style="border-radius: 15px;">
 
 	<tr>
       <td class="Post-image"><%= link_to(post_path(t), class: "Post-image3", data: {"turbolinks" => false} ) do %><%= attachment_image_tag t.post_images.first, :image, :fill, 200, 200, class: "Post-image2" %>
@@ -50,5 +73,9 @@
     <%# end %>
 
  <%= link_to 'ログアウト', destroy_admin_user_session_path, method: :delete %>
+
+<div class="paginate" data-turbolinks="false">
+  <%= paginate @posts, class: "paginate2" %>
+</div>
 
 </body>

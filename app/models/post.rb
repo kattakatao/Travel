@@ -52,18 +52,21 @@ class Post < ApplicationRecord
 		リビア:205,リベリア:206,ルワンダ:207,レソト:208
 	}, _prefix: true
 
-	ransacker :country, formatter: proc { |v|
-		sym = Post.countries_i18n.invert[v]
-		if sym.blank?
-			-1
-		else
-		  sym
-		end
-	} do |post|
-		post.table[:country]
-	end
 
-	 # def favorited_by?(end_user)
-	 # 	favorites.where(end_user_id: end_user.id).exists?
-	 # end
+# ransacker :country, formatter: proc { |v|
+#   sym = Post.countries_i18n.invert[v]
+#   if sym.blank?
+#     -1
+#   else
+#     sym
+#   end
+# } do |parent|
+#   parent.table[:country]
+# end
+
+	  def favorited_by?(end_user)
+	  	unless end_user.blank?
+	  	  favorites.where(end_user_id: end_user.id).exists?
+	    end
+	  end
 end

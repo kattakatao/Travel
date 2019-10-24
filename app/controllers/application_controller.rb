@@ -6,16 +6,16 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
   	if end_user_signed_in?
-  		  posts_path
+  		  end_user_path(current_end_user.id)
   	elsif admin_user_signed_in?
         posts_path
   	end
 
   end
 
-  #def after_sign_out_path_for(resource)
-	  #top_path
-  #end
+  def after_sign_out_path_for(resource)
+	  about_top_path
+  end
 
 protected
   def configure_permitted_parameters

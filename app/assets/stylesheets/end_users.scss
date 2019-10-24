@@ -1,0 +1,105 @@
+// Place all the styles related to the end_users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#mypage {
+	background-image: url(/assets/sunset.jpg);
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.mypage2 {
+	padding-top: 5%;
+}
+
+.mypage-title {
+	color: white;
+	text-align: center;
+}
+
+.myname {
+	text-align: center;
+}
+
+.myemail {
+	text-align: center;
+}
+
+.mypage-name {
+	color: white;
+	font-size: 25px;
+	letter-spacing: 5px;
+}
+
+.mypage-name2{
+	color: white;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+
+.mypage-email {
+	color: white;
+	font-size: 20px;
+	padding-top: 5px;
+}
+
+.mypage-email2{
+	color: white;
+	font-size: 20px;
+	letter-spacing: 2px;
+}
+
+.like-end-user {
+	color: white;
+	padding-top: 30px;
+}
+
+.comment-end-user {
+	position: absolute;
+	top: 100%;
+	left: 15%;
+	text-align: center;
+	color: white;
+	padding-top: 15px;
+}
+
+.comment_title {
+	margin-top: 15px;
+}
+
+.comment_title2 {
+	color: white;
+	font-size: 20px;
+}
+
+.comment_title2:hover {
+	color: black;
+}
+
+// .like-comment-end-user {
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// }
+
+.like-end-user {
+	position: absolute;
+	top: 100%;
+	left: 70%;
+	text-align: center;
+	color: white;
+	padding-top: 15px;
+}
+
+// .like-comment-end-user:last-child {
+// 	padding-left: 50%;
+// }
+
+// .like-comment-end-user:first-child {
+// 	padding-top: 0;
+// }
+
+
+

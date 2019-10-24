@@ -11,10 +11,6 @@
 </div>
 
 <%= form_for(@message, url: { action: :confirm}) do |f| %>
-<!--
-  <div class="info-main">
-    <img src="assets/guam.jpg" class= "img2">
-  	<h2>お問い合わせ</h2> -->
 
   	 <% if @message.errors.present? %>
   	 	<div>
@@ -29,20 +25,20 @@
 
   	<div class="info-name-main">
   	  <strong class="info-name">お名前</strong>
-  	  <p><%= f.text_field :name, placeholder: '20文字以内', class: "info-name2" %></p>
+      <%= f.text_field :name, placeholder: '20文字以内', class: "info-name2" %>
   	</div>
   	<div class="info-email-main">
-  	  <strong class="info-email">メールアドレス</strong>
-  	  <p><%= f.text_field :email, placeholder: '20文字以内', class: "info-email2" %></p>
+  	  <strong class="info-email">Email</strong>
+  	  <%= f.text_field :email, placeholder: '20文字以内', class: "info-email2" %>
   	</div>
   	<div class="info-category-main">
-  	  <strong class="info-category">お問い合わせ項目</strong>
-  	  <p><%= f.select :category, ['旅行を計画して欲しい',
-'オススメの場所を知りたい', 'その他'], {}, :class => 'info-category2' %></p>
+  	  <strong class="info-category">項目</strong>
+  	  <%= f.select :category, ['旅行を計画して欲しい',
+'オススメの場所を知りたい', 'その他'], {}, :class => 'info-category2' %>
   	</div>
   	<div class="info-text-main">
-  	  <strong class="info-text">お問い合わせ内容</strong>
-  	  <p><%= f.text_area :content, class: 'info-text2' %></p>
+  	  <strong class="info-text">内容</strong>
+  	  <%= f.text_area :content, class: 'info-text2' %>
   	</div>
   	  <%= f.submit '確認画面へ', class: 'info-submit' %>
   </div>
