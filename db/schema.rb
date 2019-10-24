@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_05_092328) do
+ActiveRecord::Schema.define(version: 2019_10_10_115048) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "kattakatao@icliud.com", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_10_05_092328) do
     t.datetime "updated_at", null: false
     t.string "provider"
     t.string "uid"
+    t.string "nickname"
     t.index ["email"], name: "index_end_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_end_users_on_reset_password_token", unique: true
   end
@@ -52,12 +53,23 @@ ActiveRecord::Schema.define(version: 2019_10_05_092328) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "inquiries", force: :cascade do |t|
+    t.string "name"
+    t.string "message"
+    t.integer "category"
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "post_comments", force: :cascade do |t|
     t.text "comment"
     t.integer "end_user_id"
     t.integer "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text "reply_post_comment"
+    t.integer "admin_user_id"
   end
 
   create_table "post_images", force: :cascade do |t|
@@ -79,6 +91,15 @@ ActiveRecord::Schema.define(version: 2019_10_05_092328) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "sns_credentials", force: :cascade do |t|
+    t.string "provider"
+    t.string "uid"
+    t.integer "end_user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["end_user_id"], name: "index_sns_credentials_on_end_user_id"
   end
 
 end

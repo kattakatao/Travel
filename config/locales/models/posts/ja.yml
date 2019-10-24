@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        country: 国
+
+  enums:
+    post:
+      country:
+        インド: インド
+        日本: 日本

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'end_users/show'
   devise_for :admin_users, controllers: {
   	sessions: 'admin_users/sessions',
   	passwords: 'admin_users/passwords',
@@ -11,10 +12,20 @@ Rails.application.routes.draw do
     omniauth_callbacks: 'end_users/omniauth_callbacks'
   }
 
+  resources :end_users, :only => [:show]
+
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
   	resource :favorites, only: [:create, :destroy]
   	resource :post_comments, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
 
+  get 'index' => 'messages#index'
+  post 'confirm' => 'messages#confirm'
+  post 'done' => 'messages#done'
+
+  get 'about' => 'posts#about'
+  get 'about_top' => 'posts#about_top'
+  get 'comment_admin' => 'posts#show'
+  post 'posts/:post_id/post_comments' => 'post_comments#create'
 end
