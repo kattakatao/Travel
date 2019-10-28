@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   resources :end_users, :only => [:show]
 
   resources :posts, only: [:new, :create, :index, :show, :edit, :update, :destroy] do
-  	resource :favorites, only: [:create, :destroy]
-  	resource :post_comments, only: [:create, :destroy]
+  	resources :favorites, only: [:create, :destroy]
+  	resources :post_comments, only: [:create, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   end
 
