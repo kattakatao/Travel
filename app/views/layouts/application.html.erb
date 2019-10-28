@@ -41,26 +41,32 @@
       <span class="drawer-hamburger-icon"></span>
     </button>
 
-    <nav class="drawer-nav" role="navigation" style="background-image: url(/assets/TABIHAMA4.png); background-size: cover;">
+    <nav class="drawer-nav" role="navigation" style="background-image: url(/images/TABIHAMA4.png); background-size: cover;">
       <ul class="drawer-menu">
         <li class="drawer-title">TABIHAMA</li>
 
-        <li class="drawer-home"><%= link_to 'Home', about_path, class: "drawer-home2", data: {"turbolinks" => false} %></li>
+        <!-- <li class="drawer-home"><%#= link_to 'Home', about_path, class: "drawer-home2", data: {"turbolinks" => false} %></li> -->
 
-        <li class="drawer-about-top"><%= link_to 'About Top', about_top_path, class: "drawer-about-top2", data: {"turbolinks" => false} %></li>
+        <li class="drawer-home"><%= link_to 'Home', about_top_path, class: "drawer-home2", data: {"turbolinks" => false} %></li>
 
         <li class="drawer-about"><%= link_to 'About', about_path, class: "drawer-about2", data: {"turbolinks" => false} %></li>
 
+        <%if admin_user_signed_in? %>
+             <li class="Drawer-Post-New"><%= link_to '新規投稿', new_post_path, class: "Drawer-Post-New2", data: {"turbolinks" => false} %></li>
+        <% end %>
+
         <li class="drawer-posts"><%= link_to '投稿一覧', posts_path, class: "drawer-posts2", data: {"turbolinks" => false} %></li>
 
-        <li class="drawer-index"><%= link_to 'お問い合わせ', index_path, class: "drawer-index2", data: {"turbolinks" => false} %></li>
+        <% if end_user_signed_in? %>
+          <li class="drawer-index"><%= link_to 'お問い合わせ', index_path, class: "drawer-index2", data: {"turbolinks" => false} %></li>
+        <% end %>
 
         <% if end_user_signed_in? %>
             <li class="drawer-mypage"><%= link_to 'マイページ', end_user_path(current_end_user.id), class: "drawer-mypage2", data: {"turbolinks" => false} %></li>
             <li class="drawer-log-out"><%= link_to 'ログアウト', destroy_end_user_session_path, class: "drawer-log-out2", data: {"turbolinks" => false}, method: :delete %></li>
          <% else %>
-            <li class="drawer-log-in"><%= link_to 'ログイン', end_user_session_path, class: "drawer-log-in2", data: {"turbolinks" => false} %></li>
             <li class="drawer-sign-up"><%= link_to '新規登録',  new_end_user_registration_path, class: "drawer-sign-up2", data: {"turbolinks" => false} %></li>
+            <li class="drawer-log-in"><%= link_to 'ログイン', end_user_session_path, class: "drawer-log-in2", data: {"turbolinks" => false} %></li>
         <% end %>
 
         <% if admin_user_signed_in? %>

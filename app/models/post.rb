@@ -53,16 +53,27 @@ class Post < ApplicationRecord
 	}, _prefix: true
 
 
-# ransacker :country, formatter: proc { |v|
-#   sym = Post.countries_i18n.invert[v]
-#   if sym.blank?
-#     -1
-#   else
-#     sym
-#   end
-# } do |parent|
-#   parent.table[:country]
-# end
+ransacker :country, formatter: proc { |v|
+  sym = Post.countries[v]
+  if sym.blank?
+    -1
+  else
+    sym
+  end
+} do |parent|
+  parent.table[:country]
+end
+
+ransacker :prefectures, formatter: proc { |v|
+  sym = Post.prefectures[v]
+  if sym.blank?
+    -1
+  else
+    sym
+  end
+} do |parent|
+  parent.table[:prefectures]
+end
 
 	  def favorited_by?(end_user)
 	  	unless end_user.blank?

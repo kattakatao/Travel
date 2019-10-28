@@ -107,10 +107,15 @@
               <span class="comment-date"><%= post_comment.created_at.strftime('%Y/%m/%d') %></span>
             </span>
 
+            <% if post_comment.admin_status? %>
+            <p class="link-author"><%= post_comment.admin_user.name %></p>
+            <% else %>
             <p class="link-author"><%= post_comment.end_user.name %><%= post_comment.end_user.nickname %></p>
+            <% end %>
             </div>
             <div class="comment-entry"><%= post_comment.comment %></div>
           </div>
+          <%#= link_to '削除', post_post_comments_path(@post), method: :delete %>
         </div>
       </li>
       <% end %>
@@ -126,16 +131,17 @@
        <%= f.submit 'コメントする', class: "comment-submit" %>
      <% end %>
      <% end %>
-<!--
-     <%# if admin_user_signed_in? %>
-     <%#= form_for  [@post, @post_comment] do |f| %>
+
+    <% if admin_user_signed_in? %>
+     <%= form_for  [@post, @post_comment] do |f| %>
       <div class="row">
          <div class="col-sm-12">
-          <%#= f.text_area :reply_post_comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
+          <%= f.text_area :comment, rows:'5', class: "form-control",placeholder: "コメントをここに" %>
          </div>
        </div>
-       <%#= f.submit 'コメントする', class: "comment-submit" %>
-     <%# end %>
-     <%# end %> -->
+       <%= f.submit 'コメントする', class: "comment-submit" %>
+       <
+     <% end %>
+     <% end %>
 
   </body>
