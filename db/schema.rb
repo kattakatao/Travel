@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_10_115048) do
+ActiveRecord::Schema.define(version: 2019_10_27_100503) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "kattakatao@icliud.com", null: false
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 2019_10_10_115048) do
     t.datetime "updated_at", null: false
     t.text "reply_post_comment"
     t.integer "admin_user_id"
+    t.boolean "admin_status", default: false
   end
 
   create_table "post_images", force: :cascade do |t|

@@ -33,17 +33,43 @@ class PostCommentsController < ApplicationController
 	  if current_end_user
 		post = Post.find(params[:post_id])
 		comment = current_end_user.post_comments.new(post_comment_params)
-		comment.post_id = post.id
-		comment.save
+		comment.post = post
+		comment.save!
 		redirect_to post_path(post)
-	else
+	 elsif current_admin_user
+	 	post = Post.find(params[:post_id])
+		comment = current_admin_user.post_comments.new(post_comment_params)
+		comment.post = post
+	 	comment.admin_status = true
+	 	comment.save!
+	 	redirect_to about_path
+	 else
 		redirect_to posts_path(post)
 	  end
     end
 
+  #   def destroy
+  #   	 if current_end_user
+		# post = Post.find(params[:post_id])
+		# comment = current_end_user.post_comments(params[:id])
+		# comment.destroy
+		# redirect_to post_path(post)
+	 # elsif current_admin_user
+	 # 	post = Post.find(params[:post_id])
+		# comment = current_admin_user.post_comments.new(post_comment_params)
+		# comment.post = post
+	 # 	comment.admin_status = true
+	 # 	comment.save!
+	 # 	redirect_to about_path
+	 # else
+		# redirect_to posts_path(post)
+	 #   end
+  #   end
+
+
 	private
 		def post_comment_params
-			params.require(:post_comment).permit(:end_user_id, :post_id, :comment)
+			params.require(:post_comment).permit(:end_user_id, :post_id, :comment, :admin_user_id, :admin_status)
 	    end
 	end
 

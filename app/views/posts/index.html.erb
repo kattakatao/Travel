@@ -7,7 +7,7 @@
 <%= search_form_for @search, url: posts_path do |f| %>
 
    <%= f.label "検索する場合はこちら", class: "ransack" %>
-   <%= f.search_field :title_cont, class: "ransack2" %>
+   <%= f.search_field :title_or_country_or_prefectures_cont, class: "ransack2" %>
 
    <!--  <%#= f.select :prefectures, Post.prefectures_i18n.invert.map{|key, value| [key, Post.prefectures[value]]} %> -->
 
