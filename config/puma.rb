@@ -51,4 +51,6 @@ stdout_redirect(
 
 # デーモン
 
-daemonize
+if Rails.env.production?
+    daemonize
+end

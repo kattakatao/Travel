@@ -1,8 +1,5 @@
 <div class="About-main" style= "background-image: url(<%= image_url('sea.jpg') %>">>
 
-<!-- <div class="About-title">
-  <p class="About-title2">About</p>
-</div> -->
 
 <div class="Tabihama-Title">
   <span class="Tabihama-Title-Text">TABIHAMAについて</span>
@@ -18,8 +15,11 @@
 
 <div class="Function-Favorite">
   <p class="About-Favorite">１、いいね機能</p>
-     <img src="/images/About-Favorite-img.jpg" class= "About-Favorite-img" >
-     <p class="About-Favorite-Text">管理者が紹介する旅行記事に対して、検索ワードを入力し、<br>
+    <%#= image_tag("sea.jpg") class: "About-Favorite-img" %>
+    <!-- <img src="<%#= asset_path "" %> class= "About-Favorite-img" /> -->
+     <!-- <img src="<%#= asset_path "About-Favorite-img.jpg" %>" class= "About-Favorite-img" >
+     <img src="<%#= asset_path "sea.jpg" %>">
+     <p class="About-Favorite-Text"> -->管理者が紹介する旅行記事に対して、検索ワードを入力し、<br>
       <span class="Click">１クリック</span>でいいね👍することが出来ます。<br>
      いいねした記事は<span class="Click">マイページ</span>に記録されます。</p>
 </div>
