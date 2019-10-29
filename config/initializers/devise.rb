@@ -296,10 +296,12 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+case Rails.env
+when 'production'
+  config.omniauth :facebook, ENV['FACEBOOK_KEY_PRODUCTION'], ENV['FACEBOOK_SECRET_PRODUCTION']
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID_PRODUCTION'], ENV['GOOGLE_CLIENT_SECRET_PRODUCTION'], skip_jwt: true
 
-  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']  #, scope: 'email', info_fields: 'email', callback_url: "#{ENV['HOST']}/end_users/auth/facebook/callback"
-  #config.omniauth :twitter, ENV['TWITTER_API_KEY'], ENV['TWITTER_API_SECRET'], scope: 'email', oauth_callback: "#{ENV['HOST']}/end_users/auth/twitter/callback"
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], skip_jwt: true#, scope: 'email', redirect_uri: "#{ENV['HOST']}/end_users/auth/google_oauth2/callback"
-  #OmniAuth.config.logger = Rails.logger if Rails.env.development?
-  config.omniauth :instagram, ENV['CLIENT_ID'], ENV['CLIENT_STATUS']
+when 'development'
+  config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], skip_jwt: true
 end
