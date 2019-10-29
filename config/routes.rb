@@ -29,5 +29,5 @@ Rails.application.routes.draw do
   get 'comment_admin' => 'posts#show'
   post 'posts/:post_id/post_comments' => 'post_comments#create'
 
-  get '3.115.91.101' => 'posts#about_top'
+  root :to => 'posts#about_top'
 end
