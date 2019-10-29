@@ -3,10 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #mypage {
-	background-image: url(/assets/sunset.jpg);
 	background-size: cover;
 	position: relative;
 	overflow: hidden;
+	background-image: url('/assets/sunset.jpg');
+
 }
 
 .mypage2 {
