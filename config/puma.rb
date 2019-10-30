@@ -37,20 +37,17 @@ bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
 
 rails_root = Dir.pwd
 
-pidfile File.join(rails_root, 'tmp', 'pids', 'puma.pid')
+if Rails.env.production?
+	pidfile File.join(rails_root, 'tmp', 'pids', 'puma.pid')
+	state_path File.join(rails_root, 'tmp', 'pids', 'puma.state')
+	stdout_redirect(
 
-state_path File.join(rails_root, 'tmp', 'pids', 'puma.state')
+		File.join(rails_root, 'log', 'puma.log'),
+		File.join(rails_root, 'log', 'puma-error.log'),
 
-stdout_redirect(
-
-	File.join(rails_root, 'log', 'puma.log'),
-	File.join(rails_root, 'log', 'puma-error.log'),
-
-	true
-)
+		true
+	)
 
 # デーモン
-
-if Rails.env.production?
     daemonize
 end
