@@ -7,6 +7,7 @@ class EndUsers::OmniauthCallbacksController < Devise::OmniauthCallbacksControlle
   end
 
   def google_oauth2
+    # binding.pry
     callback_from :google_oauth2
   end
 
@@ -16,7 +17,6 @@ class EndUsers::OmniauthCallbacksController < Devise::OmniauthCallbacksControlle
     provider = provider.to_s
 
     @end_user = EndUser.find_for_oauth(request.env['omniauth.auth'])
-
     if @end_user.persisted?
       flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
       sign_in_and_redirect @end_user, event: :authentication
