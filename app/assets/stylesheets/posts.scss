@@ -132,12 +132,18 @@
 }
 
 //Slick サムネイル　スライドショー//
-#Post-show {
+#Post-Show-Main {
 	background-color: black;
 }
 
-#slider,#thumbnail_slider{
+#slider{
   width: 600px;
+  padding-top: 30px;
+  margin: 0 auto 10px;
+}
+
+#thumbnail_slider {
+  width: 1000px;
   padding-top: 30px;
   margin: 0 auto 10px;
 }
@@ -159,6 +165,19 @@
 	margin: 0 15px;
 }
 
+.slide-image-sub {
+	padding: 0 30px;
+}
+
+.Post-slide {
+	position: relative;
+}
+
+.Post-Show-Favorites-Main {
+	position: absolute;
+	top: 67%;
+	left: 75%;
+}
 //投稿内容//
 
 
@@ -205,15 +224,25 @@
 // 	padding: 15px;
 // }
 
-.Post-show-content {
+.clearfix::after {
+    content : " ";
+    display : block;
+    clear : both;
+}
+
+.Post-Show {
+	margin-top: 10%;
+}
+
+.Post-Show-Content-Main {
+	margin-top: 5%;
+	margin-left: 5%;
+	float: left;
+}
+
+.Post-Show-Content {
 	color: white;
 	font-size: 20px;
-	// margin-left: 80%;
-	border: 1px solid white;
-	// display: inline-block;
-	position: absolute;
-	top: 140%;
-	left: 60%;
 }
 
 .Post-show-list {
@@ -221,6 +250,7 @@
 	border-collapse: collapse;
 	margin-top: 30px;
 	margin-left: 5%;
+	float: left;
 	// padding-left: 20px;
 	// letter-spacing: 3px;
 }

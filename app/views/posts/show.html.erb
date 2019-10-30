@@ -1,4 +1,4 @@
-<body id="Post-show">
+<body id="Post-Show-Main">
 
   <div class="Travel-show-title">
     <h1>TABIHAMA</h1>
@@ -8,21 +8,39 @@
     <ul id="slider">
 
       <% @post.post_images.each do |image| %>
-          <li class="slide-item"><%= attachment_image_tag image, :image %></li>
+          <li class="slide-item"><%= attachment_image_tag image, :image, class: "slide-image-main" %></li>
       <% end %>
     </ul>
     <ul id="thumbnail_slider">
       <% @post.post_images.each do |image| %>
-          <li class="slide-item"><%= attachment_image_tag image, :image %></li>
+          <li class="slide-item"><%= attachment_image_tag image, :image, class: "slide-image-sub" %></li>
 
       <% end %>
     </ul>
 
   </div>
 
+  <div class="Post-Show-Favorites-Main">
+  <% if @post.favorited_by?(current_end_user) %>
+ <li class="Post-Show-Favorites">
+  <%= link_to post_favorites_path(@post), method: :delete do %>
+   <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
+   <%= @post.favorites.count %> 👍
+  <% end %>
+ </li>
+  <% else %>
+ <li class="Post-Show-Favorites">
+  <%= link_to post_favorites_path(@post), method: :post do %>
+   <i class="fa fa-heart-o" aria-hidden="true"></i>
+   <%= @post.favorites.count %> 👍
+  <% end %>
+ </li>
+  <% end %>
+</div>
 
 
-<table class="Post-show-list">
+<div class="Post-Show clearfix" >
+ <table class="Post-show-list">
   <tr class="Post-show-tr">
     <th class="Post-show-th">タイトル</th>
     <td class="Post-show-td"><%= @post.title %></td>
@@ -60,37 +78,15 @@
     <td class="Post-show-td"><%= @post.date %></td>
   </tr>
 
-  <div class="Post-show-content">
-    <%= simple_format (@post.content) %>
+ </table>
+
+  <div class="Post-Show-Content-Main">
+    <span class="Post-Show-Content">
+      <%= simple_format (@post.content) %>
+    </span>
   </div>
 
-</table>
-
-
-
-  <% if @post.admin_user == current_admin_user %>
-    <%= link_to "編集", edit_post_path(@post) %>
-    <%= link_to "削除", post_path(@post), method: :delete %>
-  <% end %>
-
-  <% if @post.favorited_by?(current_end_user) %>
- <li>
-  <%= link_to post_favorites_path(@post), method: :delete do %>
-   <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i>
-   <%= @post.favorites.count %> 👍
-  <% end %>
- </li>
-<% else %>
- <li>
-  <%= link_to post_favorites_path(@post), method: :post do %>
-   <i class="fa fa-heart-o" aria-hidden="true"></i>
-   <%= @post.favorites.count %> 👍
-  <% end %>
- </li>
-<% end %>
-
-
-
+</div>
 
 
 	<i class="fa fa-comment">
@@ -152,5 +148,10 @@
        <
      <% end %>
      <% end %>
+
+  <% if @post.admin_user == current_admin_user %>
+    <%= link_to "編集", edit_post_path(@post) %>
+    <%= link_to "削除", post_path(@post), method: :delete %>
+  <% end %>
 
   </body>

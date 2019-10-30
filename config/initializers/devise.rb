@@ -300,9 +300,8 @@ case Rails.env
 when 'production'
   config.omniauth :facebook, ENV['FACEBOOK_KEY_PRODUCTION'], ENV['FACEBOOK_SECRET_PRODUCTION']
   config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID_PRODUCTION'], ENV['GOOGLE_CLIENT_SECRET_PRODUCTION'], skip_jwt: true
-
 when 'development'
   config.omniauth :facebook, ENV['FACEBOOK_KEY'], ENV['FACEBOOK_SECRET']
-  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], skip_jwt: true
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'],  skip_jwt: true
 end
 end
