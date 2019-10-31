@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     # @q = Post.ransack(search_params)
     #@countries = @q.result
     @search = Post.ransack(params[:q])
-    @posts = @search.result(distinct: true).page(params[:page]).per(PER)
+    @posts = @search.result(distinct: true).page(params[:page]).per(PER).order(created_at: :desc)
     # binding.pry
     #@post_image = PostImage.find_by(post_id: @post.id)
     #@post_image = PostImage.find_by(post_id: @post.id)

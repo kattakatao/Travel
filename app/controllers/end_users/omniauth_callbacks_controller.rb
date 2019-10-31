@@ -7,7 +7,6 @@ class EndUsers::OmniauthCallbacksController < Devise::OmniauthCallbacksControlle
   end
 
   def google_oauth2
-    # binding.pry
     callback_from :google_oauth2
   end
 

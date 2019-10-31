@@ -134,6 +134,7 @@
 //Slick サムネイル　スライドショー//
 #Post-Show-Main {
 	background-color: black;
+	position: relative;
 }
 
 #slider{
@@ -144,7 +145,7 @@
 
 #thumbnail_slider {
   width: 1000px;
-  padding-top: 30px;
+  padding-top: 50px;
   margin: 0 auto 10px;
 }
 .slide-item{
@@ -169,14 +170,18 @@
 	padding: 0 30px;
 }
 
-.Post-slide {
-	position: relative;
-}
+// .Post-slide {
+// 	position: relative;
+// }
 
 .Post-Show-Favorites-Main {
 	position: absolute;
-	top: 67%;
-	left: 75%;
+	top: 30%;
+	left: 70%;
+}
+
+.Post-Show-Favorites a {
+	font-size: 30px;
 }
 //投稿内容//
 
@@ -231,18 +236,24 @@
 }
 
 .Post-Show {
-	margin-top: 10%;
+	margin-top: 5%;
 }
 
 .Post-Show-Content-Main {
-	margin-top: 5%;
+	margin-top: 3%;
 	margin-left: 5%;
 	float: left;
+	white-space: nowrap;
 }
 
 .Post-Show-Content {
 	color: white;
 	font-size: 20px;
+}
+
+.Post-Show-Content p {
+	letter-spacing: 0.1em;
+	line-height: 30px;
 }
 
 .Post-show-list {
@@ -251,6 +262,7 @@
 	margin-top: 30px;
 	margin-left: 5%;
 	float: left;
+	white-space: nowrap;
 	// padding-left: 20px;
 	// letter-spacing: 3px;
 }
@@ -332,4 +344,8 @@
 .comment-submit {
 	margin-left: 80%;
 	margin-top: 8%;
+}
+
+.Post-Show-Favorites-Main ul {
+	list-style: none;
 }

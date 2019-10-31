@@ -3,10 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #mypage {
-	background-size: cover;
 	position: relative;
 	overflow: hidden;
-	background-image: url('/assets/sunset.jpg');
+	background-size: cover;
 
 }
 
@@ -30,13 +29,13 @@
 .mypage-name {
 	color: white;
 	font-size: 25px;
-	letter-spacing: 5px;
+	letter-spacing: 0.1em;
 }
 
 .mypage-name2{
 	color: white;
 	font-size: 20px;
-	letter-spacing: 2px;
+	letter-spacing: 0.1em;
 }
 
 
@@ -49,7 +48,7 @@
 .mypage-email2{
 	color: white;
 	font-size: 20px;
-	letter-spacing: 2px;
+	letter-spacing: 0.1em;
 }
 
 .like-end-user {
@@ -67,12 +66,13 @@
 }
 
 .comment_title {
-	margin-top: 15px;
+	margin-top: 30px;
 }
 
 .comment_title2 {
 	color: white;
 	font-size: 20px;
+	letter-spacing: 0.1em;
 }
 
 .comment_title2:hover {

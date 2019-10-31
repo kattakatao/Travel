@@ -15,28 +15,26 @@
 
 <div class="Function-Favorite">
   <p class="About-Favorite">１、いいね機能</p>
-    <%#= image_tag("sea.jpg") class: "About-Favorite-img" %>
-    <!-- <img src="<%#= asset_path "" %> class= "About-Favorite-img" /> -->
-     <!-- <img src="<%#= asset_path "About-Favorite-img.jpg" %>" class= "About-Favorite-img" >
-     <img src="<%#= asset_path "sea.jpg" %>">
-     <p class="About-Favorite-Text"> -->管理者が紹介する旅行記事に対して、検索ワードを入力し、<br>
+  <%= image_tag 'About-Favorite.jpg', class: "About-img" %>
+    <p class="About-Favorite-Text">
+    管理者が紹介する旅行記事に対して、検索ワードを入力し、<br>
       <span class="Click">１クリック</span>でいいね👍することが出来ます。<br>
      いいねした記事は<span class="Click">マイページ</span>に記録されます。</p>
 </div>
 
 <div class="Function-Comment">
   <p class="About-Comment">２、コメント機能</p>
-   <img src=" /images/About-Favorite-img.jpg" class= "About-Favorite-img">
+  <%= image_tag 'About-Comment.jpg', class: "About-img" %>
      <p class="About-Comment-Text">管理者が紹介する旅行記事に対して、<br><span class="Click">コメント</span>をすることが出来ます。<br>コメントした記事は<span class="Click">マイページ</span>に記録されます。</p>
 </div>
 
 <div class="Function-Contact">
   <p class="About-Contact">３、お問い合わせ機能</p>
-  <img src=" /images/About-Favorite-img.jpg" class= "About-Favorite-img">
+  <%= image_tag 'About-index.jpg', class: "About-img" %>
      <p class="About-Contact-Text">旅行を計画中の方や、<br>旅先のおすすめの場所を知りたい方向けです。<br>
      お問い合わせをいただくと、<br>
      実際に旅行を計画したり<br>おすすめの場所をお伝えしたりします。<br>
-   ⚠️あくまでも提案するのみであり、<br>予約等はお客様個人でお願い致します。</p>
+   ⚠️あくまでも提案するのみであり、<br>予約等はお客様ご自身でお願い致します。</p>
 </div>
 
 </div>
@@ -45,34 +43,55 @@
 <div id="My-Profile-Main">
 
   <div class="My-profile">
-  <span class="My-Profile-Title">自己紹介</span>
-  <p class="My-text">199326</p>
-</div>
+    <span class="My-Profile-Title">Profile</span>
+  </div>
 
-<div class="My-image">
-	<!-- <img src=" /images/mikoshi.jpg" class= "about-image"></div> -->
+  <div class="My-Hobby">
+    <h3 class="My-Hobby-Title">趣味</h3>
+    <ul class="My-Hobby-Text">
+      <li>ドライブ（運転する側)</li>
+      <li>旅行</li>
+      <li>スポーツ観戦(サッカー・野球等)</li>
+    </ul>
+  </div>
 
-  <div class="my-icon">
-	<p class="my-icom-title">SNS</p>
-  	<i class="fab fa-line fa-3x my-line"></i>
+  <div class="My-Qualification">
+     <h3 class="My-Qualification-Title">資格</h3>
+    <ul class="My-Qualification-Text">
+      <li>第一種普通自動車運転免許(取得)</li>
+      <li>国内旅行業務取扱管理者(取得)</li>
+      <li>総合旅行業務取扱管理者(取得)</li>
+    </ul>
+  </div>
 
- 	<a href=""><i class="fab fa-instagram fa-3x my-insta"></i></a>
+  <div class="My-Career">
+    <p class="My-Career-Text">経歴
+      </p>
+  </div>
 
-  <ul class="snsbtniti">
-    <li><a href="https://twitter.com/kattakatao" target="_blank" class="flowbtn5 fl_tw1"><i class="fab fa-twitter"></i><div>Twitter</div></a></li>
-    <li><a href="https://www.instagram.com/kattakatao/" target="_blank" class="flowbtn5 insta_btn5"><i class="fab fa-instagram"></i><div>Instagram</div></a></li>
+  </div>
 
-	<a href="https://twitter.com/kattakatao"><i class="fab fa-twitter fa-3x my-twitter"></i></a>
 
-	<a href=""><i class="fab fa-facebook-f fa-3x my-facebook"></i></a>
-</ul>
+<div id= "SNS">
+
+  <div class="My-SNS">
+    <span class="My-SNS-Title">SNS</span>
   </div>
 
   <div class="line-icon">
   	<div class="line-it-button" data-lang="ja" data-type="friend" data-lineid="kattakatao" style="display: none;"></div>
  	<script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+  <li><a href="ttps://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" class="flowbtn5 fl_li1"><i class="fab fa-line"></i><div>LINE＠</div></a></li>
   </div>
 
+  <ul class="snsbtniti">
+   <div class="Twitter">
+    <li><a href="https://twitter.com/kattakatao" class="flowbtn5 fl_tw1"
+    ><i class="fab fa-twitter"></i><div>Twitter</div></a></li>
+   </div>
 
-  </div>
+<li><a href="https://www.instagram.com/kattakatao/" class="flowbtn5 insta_btn5"><i class="fab fa-instagram"></i><div>Instagram</div></a></li>
+
+<li><a href="https://www.facebook.com/kattakatao" class="flowbtn5 fl_fb1"><i class="fab fa-facebook-f"></i><div>Facebook</div></a></li>
+</ul>
 </div>

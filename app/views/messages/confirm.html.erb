@@ -1,54 +1,48 @@
-<body id="Travel2">
+<body id="Travel-Confirm">
 
-<div class="background-container">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="" class="info-background">
-<div class="stars"></div>
-<div class="twinkling"></div>
-<div class="clouds"></div>
+<div class="background-container-none">
+  <%= image_tag('plane.jpg', class: "message-img") %>
 
 <div class="info-title">
-  <div class="info-title2">お問い合わせ確認</div>
+  <div class="info-title3">お問い合わせ確認</div>
 </div>
 
 <%= form_for @message, :url => done_path do |f| %>
-   <div>
-   	<strong class="info-name">お名前</strong>
-   	<p>
+   	<strong class="info-name3">お名前</strong>
    		<%= f.hidden_field :name %>
-      <div class="info-name3">
+      <div class="info-name4">
    		   <%= @message.name %>
-    </div>
-   	</p>
+      </div>
    </div>
    <div>
-   	<strong class="info-email">メールアドレス</strong>
+   	<strong class="info-email3">Email</strong>
    	<p>
    		<%= f.hidden_field :email %>
-      <div class='info-email3'>
+      <div class='info-email4'>
    		 <%= @message.email %>
     </div>
    	</p>
    </div>
    <div>
-   	<strong class="info-category4">お問い合わせ項目</strong>
+   	<strong class="info-category3">項目</strong>
    	<p>
    		<%= f.hidden_field :category %>
-      <div class="info-category3">
+      <div class="info-category4">
    		<%= @message.category %>
       </div>
    	</p>
    </div>
    <div>
-   	<strong class="info-text4">お問合せ内容</strong>
+   	<strong class="info-text3">内容</strong>
    	<p>
    		<%= f.hidden_field :content, class: "info-text3" %>
-      <div class="info-text3">
-   		<%= @message.content %>
+      <div class="info-text4">
+   		<%= simple_format(@message.content) %>
     </div>
    	</p>
    </div>
      <%= f.submit '戻る', name: 'back', class: 'info-back' %>
-     <%= f.submit '送信する', class: 'info-submit' %>
+     <%= f.submit '送信する', class: 'Confirm-submit' %>
    </div>
 <% end %>
 

@@ -1,8 +1,9 @@
 <body id="Travel2">
 
-<div class="background-container">
-  <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="" class="info-background">
-<div class="stars"></div>
+<div class="background-container-none">
+  <%= image_tag('airport.jpg', class: "message-img") %>
+  <!-- <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/moon2.png" alt="" class="info-background"> -->
+<!-- <div class="stars"></div> -->
 <div class="twinkling"></div>
 <div class="clouds"></div>
 
@@ -23,23 +24,21 @@
   	 	</div>
   	 <% end %>
 
-  	<div class="info-name-main">
   	  <strong class="info-name">お名前</strong>
       <%= f.text_field :name, placeholder: '20文字以内', class: "info-name2" %>
-  	</div>
-  	<div class="info-email-main">
+
   	  <strong class="info-email">Email</strong>
   	  <%= f.text_field :email, placeholder: '20文字以内', class: "info-email2" %>
-  	</div>
-  	<div class="info-category-main">
+
+
   	  <strong class="info-category">項目</strong>
   	  <%= f.select :category, ['旅行を計画して欲しい',
 'オススメの場所を知りたい', 'その他'], {}, :class => 'info-category2' %>
-  	</div>
-  	<div class="info-text-main">
+
+
   	  <strong class="info-text">内容</strong>
   	  <%= f.text_area :content, class: 'info-text2' %>
-  	</div>
+
   	  <%= f.submit '確認画面へ', class: 'info-submit' %>
   </div>
 <% end %>
