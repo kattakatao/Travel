@@ -2,61 +2,320 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.info-title2 {
+  	position: absolute;/*絶対配置*/
+  	color: white;/*文字は白に*/
+  	top: 6%;
+  	left: 37%;
+  	font-size: 50px;
+  	letter-spacing: 0.1em;
+  	white-space: nowrap;
+}
+
+.info-title3 {
+  	position: absolute;/*絶対配置*/
+  	color: black;/*文字は白に*/
+  	top: 6%;
+  	left: 37%;
+  	font-size: 50px;
+  	letter-spacing: 0.1em;
+  	white-space: nowrap;
+}
+
+.message-img {
+	height: 900px;
+  	width: 100%;
+  	position: relative;
+  	background-size: cover;
+}
+
+#Travel2 {
+	width: auto;
+}
+
+#Travel-Confirm {
+	overflow: hidden;
+	width: auto;
+}
+
+#Travel-Done {
+	overflow: hidden;
+	width: auto;
+}
+
+.info-name {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 20%;
+	left: 48%;
+  	margin: auto;
+	letter-spacing: 0.1em;
+}
+
+.info-name2 {
+	position: absolute;
+	top: 30%;
+	left: 41%;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.info-name3 {
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	top: 25%;
+	left: 20%;
+	letter-spacing: 0.1em;
+}
+
+.info-name4 {
+	position: absolute;
+	top: 26%;
+	left: 50%;
+	font-size: 20px;
+	color: black;
+}
+
+.info-email {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 40%;
+	left: 48%;
+	letter-spacing: 0.1em;
+}
+
+.info-email2 {
+	position: absolute;
+	top: 50%;
+	left: 41%;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.info-email3 {
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	top: 35%;
+	left: 20%;
+	letter-spacing: 0.1em;
+}
+
+.info-email4 {
+	position: absolute;
+	top: 36%;
+	left: 44%;
+	font-size: 20px;
+	color: black;
+}
+
+.info-category {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 60%;
+	left: 49%;
+	letter-spacing: 0.1em;
+}
+
+.info-category2 {
+	position: absolute;
+	top: 70%;
+	left: 41%;
+	width: 300px;
+	height: 50px;
+	font-size: 20px;
+}
+
+.info-category3 {
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	top: 45%;
+	left: 21%;
+	letter-spacing: 0.1em;
+}
+
+.info-category4 {
+	position: absolute;
+	top: 46%;
+	left: 45%;
+	font-size: 20px;
+	color: black;
+}
+
+.info-text {
+	position: absolute;
+	color: white;
+	font-size: 30px;
+	top: 80%;
+	left: 49%;
+	letter-spacing: 0.1em;
+}
+
+.info-text2 {
+	position: absolute;
+	top: 90%;
+	left: 37%;
+	width: 400px;
+	height: 200px;
+	font-size: 20px;
+}
+
+.info-text3 {
+	position: absolute;
+	color: black;
+	font-size: 30px;
+	top: 55%;
+	left: 21%;
+	letter-spacing: 0.1em;
+}
+
+.info-text4 {
+	position: absolute;
+	top: 56%;
+	left: 44%;
+	font-size: 20px;
+	color: black;
+}
+
+.info-submit {
+	position: absolute;
+	top: 114%;
+	left: 70%;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	letter-spacing: 0.1em;
+	border: none;
+	outline: none;
+}
+
+.Confirm-submit {
+	position: absolute;
+	bottom: 5%;
+	right: 4%;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	letter-spacing: 0.1em;
+	border: none;
+	outline: none;
+}
+
+.info-back {
+	position: absolute;
+	bottom: 5%;
+	right: 13%;
+	font-size: 20px;
+	color: white;
+	background-color: black;
+	letter-spacing: 0.1em;
+	border: none;
+	outline: none;
+}
+
+
+
+//お問い合わせ完了画面//
+
+.background-container {
+	height: 900px;
+  	width: 100%;
+  	position: relative;
+  	background-size: cover;
+}
+
+@-webkit-keyframes typing { from { width: 0;} }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
+.done2 {
+	font: bold 300% Consolas, Monaco, monospace;
+	// border-right: .1em solid white;
+	width: 16.5em;
+	width: 21ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-animation: typing 7s steps(10, end),
+				blink-caret .5s step-end infinite alternate;
+	position: absolute;
+	color: black;
+	z-index: 4;
+}
+
+.done3 {
+	color: black;
+	position: absolute;
+	top: 30%;
+	left: 40%;
+	font-size: 20px;
+	z-index: 4;
+	font-size: 15px;
+}
+
+
+
 //背景画像&月、星、雲//
-@keyframes move-background {
-		from {
-			-webkit-transform:translate3d(0px, 0px, 0px);
-		}
-		  to {
-			-webkit-transform:translate3d(1000px, 0px, 0px);
-		}
-	  }
+// @keyframes move-background {
+// 		from {
+// 			-webkit-transform:translate3d(0px, 0px, 0px);
+// 		}
+// 		  to {
+// 			-webkit-transform:translate3d(1000px, 0px, 0px);
+// 		}
+// 	  }
 
-	@-webkit-keyframes move-background {
-		from {
-			-webkit-transform: translate3d(0px, 0px, 0px);
-	  }
-	      to {
-	  		-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+// 	@-webkit-keyframes move-background {
+// 		from {
+// 			-webkit-transform: translate3d(0px, 0px, 0px);
+// 	  }
+// 	      to {
+// 	  		-webkit-transform: translate3d(1000px, 0px, 0px);
+// 	  }
+// 	}
 
-	@-moz-keyframes move-background {
-	from {
-		-webkit-taransform: translate3d(0px, 0px, 0px);
-	  }
-	  to {
-	  	-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+// 	@-moz-keyframes move-background {
+// 	from {
+// 		-webkit-taransform: translate3d(0px, 0px, 0px);
+// 	  }
+// 	  to {
+// 	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+// 	  }
+// 	}
 
-	@-webkit-keyframes move-background {
-	from {
-		-webkit-taransform: translate3d(0px, 0px, 0px);
-	}
-	  to {
-	  	-webkit-transform: translate3d(1000px, 0px, 0px);
-	  }
-	}
+// 	@-webkit-keyframes move-background {
+// 	from {
+// 		-webkit-taransform: translate3d(0px, 0px, 0px);
+// 	}
+// 	  to {
+// 	  	-webkit-transform: translate3d(1000px, 0px, 0px);
+// 	  }
+// 	}
 
-	.background-container {
-		position: ficed;
-		top: 0;
-		left: 0;
-		bottom: 0;
-		right: 0;
-	}
+	// .background-container {
+	// 	position: ficed;
+	// 	top: 0;
+	// 	left: 0;
+	// 	bottom: 0;
+	// 	right: 0;
+	// }
 
-	.stars {
-		background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		display: block;
-		z-index: 0;
-	}
+	// .stars {
+	// 	background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+	// 	position: absolute;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	display: block;
+	// 	z-index: 0;
+	// }
 
 // 	.twinkling {
 // 		width: 10000px;
@@ -106,223 +365,15 @@
 //   right: 20px;
 // }
 
+// .background-container {
+// 	position: relative;
+// }
 
-	.info-background {
-		height: 70vh;
-		width: 70vh;
-		position: absolute;
-		z-index: 3;
-		right: 20px;
-		top: 15%;
-	}
-
-	.info-title2 {
-  		position: absolute;/*絶対配置*/
-  		color: white;/*文字は白に*/
-  		top: 6%;
-  		left: 26%;
-  		font-size: 50px;
-  		letter-spacing: 5px;
-  		z-index: 4;
-	}
-
-
-
-
-
-
-
-
-
-
-
-//
-
-#Travel2 {
-	overflow: hidden;
-	width: auto;
-}
-
-.info-name {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 30%;
-	left: 15%;
-	letter-spacing: 5px;
-	z-index: 4;
-}
-
-.info-name2 {
-	position: absolute;
-	top: 30%;
-	left: 37%;
-	width: 300px;
-	height: 50px;
-	z-index: 4;
-	font-size: 20px;
-}
-
-.info-name3 {
-	position: absolute;
-	top: 31%;
-	left: 27%;
-	font-size: 20px;
-	color: white;
-}
-
-.info-email {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 39%;
-	left: 15%;
-	letter-spacing: 5px;
-	z-index: 4;
-}
-
-.info-email2 {
-	position: absolute;
-	top: 38%;
-	left: 37%;
-	width: 300px;
-	height: 50px;
-	z-index: 4;
-	font-size: 20px;
-}
-
-.info-email3 {
-	position: absolute;
-	top: 39%;
-	left: 27%;
-	font-size: 20px;
-	color: white;
-}
-
-.info-category {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 48%;
-	left: 15%;
-	letter-spacing: 5px;
-	z-index: 4;
-}
-
-.info-category2 {
-	position: absolute;
-	top: 48%;
-	left: 37%;
-	width: 300px;
-	height: 50px;
-	z-index: 4;
-	font-size: 20px;
-}
-
-.info-category3 {
-	position: absolute;
-	top: 49%;
-	left: 27%;
-	font-size: 20px;
-	color: white;
-}
-
-.info-category4 {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 48%;
-	left: 10%;
-	letter-spacing: 5px;
-}
-
-
-.info-text {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 56%;
-	left: 15%;
-	letter-spacing: 5px;
-	z-index: 4;
-}
-
-.info-text2 {
-	position: absolute;
-	top: 56%;
-	left: 37%;
-	// max-width: 600px;
-	// height: 400px;
-	z-index: 4;
-	font-size: 20px;
-}
-
-.info-text3 {
-	position: absolute;
-	top: 57%;
-	left: 27%;
-	font-size: 20px;
-	color: white;
-	font-size: 20px;
-}
-
-.info-text4 {
-	position: absolute;
-	color: white;
-	font-size: 30px;
-	top: 56%;
-	left: 12%;
-	letter-spacing: 5px;
-}
-
-.info-submit {
-	position: absolute;
-	top: 94%;
-	left: 63%;
-	z-index: 4;
-	font-size: 20px;
-	color: white;
-	background-color: black;
-	letter-spacing: 5px;
-	border: none;
-	outline: none;
-}
-
-.info-back {
-	position: absolute;
-	top: 94%;
-	left: 59%;
-	z-index: 4;
-	font-size: 20px;
-	color: white;
-	background-color: black;
-	letter-spacing: 5px;
-	border: none;
-	outline: none;
-}
-
-
-//お問い合わせ完了画面//
-
-@-webkit-keyframes typing { from { width: 0;} }
-@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-
-.done3 {
-	color: white;
-	position: absolute;
-	font-size: 20px;
-}
-
-.done2 {
-	font: bold 300% Consolas, Monaco, monospace;
-	border-right: .1em solid white;
-	width: 16.5em;
-	width: 21ch;
-	margin: 2em 1em;
-	white-space: nowrap;
-	overflow: hidden;
-	-webkit-animation: typing 7s steps(10, end),
-				blink-caret .5s step-end infinite alternate;
-	position: absolute;
-	color: white;
- 	}
+	// .info-background {
+	// 	height: 70vh;
+	// 	width: 70vh;
+	// 	position: absolute;
+	// 	z-index: 3;
+	// 	right: 20px;
+	// 	top: 15%;
+	// }

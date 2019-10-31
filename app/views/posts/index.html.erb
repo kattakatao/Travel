@@ -9,39 +9,9 @@
    <%= f.label "検索する場合はこちら", class: "ransack" %>
    <%= f.search_field :title_or_country_or_prefectures_cont, class: "ransack2" %>
 
-   <!--  <%#= f.select :prefectures, Post.prefectures_i18n.invert.map{|key, value| [key, Post.prefectures[value]]} %> -->
-
-   <%#=f.select :country_eq, Post.countries.map{|k, v| [Post.countries_i18n[k], v]} %>
-
  <%= f.submit '検索', class: "ransack-submit" %>
 
-
-<%#= search_form_for @q do |f| %>
-<!-- <table class="table">
-  <tr>
-    <td>
-      <%#= f.label :country_in,
-        t('activerecord.attributes.post.country'),
-        class: 'mr-1' %>
-    <td class="form-inline"> -->
-      <%#= f.collection_check_boxes :country_in, Post.countries, :last, :first do |b| %>
-        <!--  .form-check.form-check-inline.ml-3  -->
-          <%#= b.label class: 'form-check-label mb-1' do %>
-          <%#= b.select(class: "form-check-input mr-2") %>
-          <%#= Post.countries_i18n[b.object.send(:first)] %>
-<%# end %>
-<%# end %>
 <% end %>
-
-
-  <%#= f.label :category_cont, 'カテゴリー' %>
-  <%#= f.search_field :category_cont %>
-
-  <%#= f.label :country_cont, '国' %>
-  <%#= f.search_field :country_cont %>
-
-  <%#= f.label :prefectures_cont, '都道府県' %>
-  <%#= f.search_field :prefectures_cont %>
 
   <% @posts.each do |t| %>
 
@@ -66,12 +36,9 @@
 
 
   </table>
-<!-- </div> -->
+
 <% end %>
 
-    <%# end %>
-
- <%= link_to 'ログアウト', destroy_admin_user_session_path, method: :delete %>
 
 <div class="paginate" data-turbolinks="false">
   <%= paginate @posts, class: "paginate2" %>
