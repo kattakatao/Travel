@@ -10,7 +10,6 @@ class EndUsersController < ApplicationController
 		@a.push(b.post_id)
 	end
 	@a.uniq!
-	# @post = Post.post_comments
 
 	c = @end_user.favorites
 	@c = []
