@@ -6,6 +6,7 @@ class Post < ApplicationRecord
 	#has_many :replies, class_name: PostComment, foreign_key: :reply_comment, dependent: :destroy
 	has_many :favorites, dependent: :destroy
 	#has_many :replies, foreign_key: :reply_post_comment, dependent: :destroy
+	validates :title, presence: true
 
 	enum prefectures: {
 		"":0,北海道:101,青森県:102,岩手県:103,宮城県:1044,秋田県:105,山形県:106,福島県:107,

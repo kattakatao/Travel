@@ -39,6 +39,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara', '>= 2.15'
+  gem 'webdrivers', '~> 3.0'
+  gem 'spring-commands-rspec'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'hirb'         # モデルの出力結果を表形式で表示するGem
+  gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
+  gem 'pry-doc'
+  gem 'pry-byebug'
+  gem 'rspec-rails'
 end
 
 group :development do
@@ -48,25 +58,20 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  #gem 'capybara', '>= 2.15'
+  #gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  # gem 'chromedriver-helper'
+  #gem 'webdrivers', ~> '3.0'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-group :development, :test do
- gem 'hirb'         # モデルの出力結果を表形式で表示するGem
- gem 'hirb-unicode' # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
- gem 'pry-doc'
- gem 'pry-byebug'
-end
 
 gem 'pry-rails'
   # 画像アップロード機能
@@ -83,16 +88,14 @@ gem 'ransack'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
+# gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
-gem 'instagram'
-gem 'omniauth-instagram'
 
 gem 'dotenv-rails'
 
 gem 'font-awesome-sass'
 
-gem 'enum_help', '~> 0.0.15'
+# gem 'enum_help', '~> 0.0.15'
 
 gem 'json'
 
