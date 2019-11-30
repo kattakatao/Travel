@@ -58,10 +58,4 @@ class PostsController < ApplicationController
           params.require(:post).permit(:admin_user_id, :title, :category, :country, :prefectures, :city, :place, :date, :image_id, :content, post_images_images: [])
       end
 
-       # def search_params
-       #   params[:q] || {
-       #     prefectures_in: Post.prefectures_i18n.invert.map{|key, value| [key, Post.prefectures[value]]}
-       #   }
-       # end
-
 end

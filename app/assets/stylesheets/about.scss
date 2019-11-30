@@ -6,7 +6,7 @@
 
 .About-main {
 	width: 100%;
-	height: 2000px;
+	height: 1800px;
 	background-size: cover;
 }
 
@@ -192,8 +192,14 @@
 	text-align: center;
 }
 
+#sub-contain {
+	width: 100%;
+	display: flex;
+}
+
 #My-Profile-Main {
 	height: 500px;
+	width: 1100px;
 	background-color: silver;
 	text-align: center;
 }
@@ -257,13 +263,6 @@
 }
 
 .My-Qualification {
-	// position: absolute;
-	// float: left;
-	// top: 70%;
-	// left: 0;
-	// bottom: 0;
-	// right: 0;
-	// margin: auto;
 	font-size: 20px;
 	letter-spacing: 0.1em;
 	padding-top: 30px;
@@ -271,7 +270,6 @@
 }
 
 .My-Career {
-	// float: left;
 	padding-top: 30px;
 	padding-left: 20%;
 	width: 100%;
@@ -293,8 +291,9 @@
 
 #SNS {
 	position: relative;
-	width: 100%;
-	height: 200px;
+	width: 350px;
+	height: 500px;
+	background-color: red;
 }
 
 .My-SNS {

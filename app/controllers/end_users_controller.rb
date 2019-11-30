@@ -11,7 +11,8 @@ class EndUsersController < ApplicationController
 	end
 	@a.uniq!
 
-	c = @end_user.favorites
+	c = @end_user.likes
+	
 	@c = []
 	c.each do |d|
 		@c.push(d.post_id)
