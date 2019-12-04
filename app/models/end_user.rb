@@ -7,7 +7,6 @@ class EndUser < ApplicationRecord
 
   has_many :posts, dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  # has_many :favorites, dependent: :destroy
   has_many :likes, dependent: :destroy
   has_many :like_posts, through: :likes, source: :post
 
