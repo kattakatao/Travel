@@ -1,14 +1,15 @@
 class EndUser < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_many :sns_credentials, dependent: :destroy
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,  :trackable, :validatable, :omniauthable, omniauth_providers: %i[facebook google_oauth2]
 
   has_many :posts, dependent: :destroy
   has_many :post_comments, dependent: :destroy
-  has_many :favorites, dependent: :destroy
+  # has_many :favorites, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :like_posts, through: :likes, source: :post
 
   def email_required?
     false

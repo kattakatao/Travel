@@ -171,8 +171,18 @@
 }
 
 // .Post-slide {
-// 	position: relative;
+// 	display: flex;
 // }
+
+.Post-main {
+	position: relative;
+}
+
+.like-link {
+	position: absolute;
+	top: 30%;
+	left: 20%;
+}
 
 .Post-Show-Favorites-Main {
 	position: absolute;
