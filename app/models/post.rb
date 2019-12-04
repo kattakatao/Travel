@@ -76,4 +76,9 @@ ransacker :prefectures, formatter: proc { |v|
   parent.table[:prefectures]
 end
 
+def liked_by?(end_user)
+	unless end_user.blank?
+		likes.where(end_user_id: end_user.id).exists?
+	end
+end
 end
