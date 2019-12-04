@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_04_031605) do
+ActiveRecord::Schema.define(version: 2019_12_04_122536) do
 
   create_table "admin_users", force: :cascade do |t|
     t.string "email", default: "kattakatao@icliud.com", null: false
@@ -44,13 +44,6 @@ ActiveRecord::Schema.define(version: 2019_12_04_031605) do
     t.string "nickname"
     t.index ["email"], name: "index_end_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_end_users_on_reset_password_token", unique: true
-  end
-
-  create_table "favorites", force: :cascade do |t|
-    t.integer "end_user_id"
-    t.integer "post_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "likes", force: :cascade do |t|

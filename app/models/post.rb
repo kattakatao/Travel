@@ -1,10 +1,8 @@
 class Post < ApplicationRecord
 	belongs_to :admin_user
-	# belongs_to :end_user
 	has_many :post_images, dependent: :destroy
 	accepts_attachments_for :post_images, attachment: :image
 	has_many :post_comments, dependent: :destroy
-	# has_many :favorites, dependent: :destroy
 	has_many :likes, dependent: :destroy
   has_many :liking_end_users, through: :likes, source: :end_user
 
@@ -78,13 +76,4 @@ ransacker :prefectures, formatter: proc { |v|
   parent.table[:prefectures]
 end
 
-# def favorited_by?(end_user) #いいねしているかどうか
-# 	 favorites.where(end_user_id: end_user.id).exists?
-# end
-
-	  # def like_by?(end_user)
-	  # 	unless end_user.blank?
-	  # 	  likes.where(end_user_id: end_user.id).exists?
-	  #   end
-	  # end
 end
