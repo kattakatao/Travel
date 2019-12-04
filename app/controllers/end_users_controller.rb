@@ -10,9 +10,9 @@ class EndUsersController < ApplicationController
 		@a.push(b.post_id)
 	end
 	@a.uniq!
-
-	c = @end_user.likes
 	
+	c = @end_user.likes
+
 	@c = []
 	c.each do |d|
 		@c.push(d.post_id)

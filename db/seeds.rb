@@ -8,6 +8,6 @@
 
 AdminUser.create!(
 	  email: "kattakatao@icliud.com",
-      password: "zxcv123",
+      password: "123456",
       name: "kattakatao"
       )

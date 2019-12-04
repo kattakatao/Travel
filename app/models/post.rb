@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
 	belongs_to :admin_user
-	belongs_to :end_user
+	# belongs_to :end_user
 	has_many :post_images, dependent: :destroy
 	accepts_attachments_for :post_images, attachment: :image
 	has_many :post_comments, dependent: :destroy
@@ -82,9 +82,9 @@ end
 # 	 favorites.where(end_user_id: end_user.id).exists?
 # end
 
-	  def favorited_by?(end_user)
-	  	unless end_user.blank?
-	  	  favorites.where(end_user_id: end_user.id).exists?
-	    end
-	  end
+	  # def like_by?(end_user)
+	  # 	unless end_user.blank?
+	  # 	  likes.where(end_user_id: end_user.id).exists?
+	  #   end
+	  # end
 end

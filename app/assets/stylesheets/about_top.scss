@@ -1,19 +1,15 @@
 #Travel {
   background: black;
-  min-height: 100%;
+  min-height: 100vh;
   overflow: hidden;
 }
 
 .about-top-title {
-  position: absolute;
   color: white;
   font-size: 50px;
-  top: 5%;
-  left: 34%;
-  right: 0;
-  margin: auto;
   white-space: nowrap;
   letter-spacing:  0.1em;
+  text-align: center;
 }
 
 .about-top-title2 {
