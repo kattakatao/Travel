@@ -140,7 +140,8 @@
 #slider{
   width: 600px;
   padding-top: 30px;
-  margin: 0 auto 10px;
+  margin: 0 auto;
+	text-align: center;
 }
 
 #thumbnail_slider {
@@ -150,12 +151,14 @@
 }
 .slide-item{
   img{
-    width: 100%;
+    // width: 100%;
+		  margin: 0 auto;
+	text-align: center;
   }
 }
 .thumbnail-item{
   img{
-    width: 98%;
+    // width: 98%;
     margin: 0 auto;
     padding: 0 15px;
   }

@@ -9,12 +9,12 @@
     <ul id="slider">
 
       <% @post.post_images.each do |image| %>
-          <li class="slide-item"><%= attachment_image_tag image, :image, class: "slide-image-main" %></li>
+          <li class="slide-item"><%= attachment_image_tag image, :image, :fill, 400, 400, class: "slide-image-main" %></li>
       <% end %>
     </ul>
     <ul id="thumbnail_slider">
       <% @post.post_images.each do |image| %>
-          <li class="slide-item"><%= attachment_image_tag image, :image, class: "slide-image-sub" %></li>
+          <li class="slide-item"><%= attachment_image_tag image, :image, :fill, 150, 150, class: "slide-image-sub" %></li>
 
       <% end %>
     </ul>
