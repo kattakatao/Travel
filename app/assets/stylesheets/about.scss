@@ -6,7 +6,7 @@
 
 .About-main {
 	width: 100%;
-	height: 250vh;
+	height: 200vh;
 	background-size: cover;
 }
 
@@ -64,7 +64,6 @@
 
 .Tabihama-content-text {
 	background-color: yellow;
-	// display: inline-block;
 	padding: 10px;
 	margin:  30px;
 	font-size: 20px;
@@ -74,7 +73,6 @@
 }
 
 .Function-Favorite {
-	// text-align: center;
 	margin-top: 5%;
 }
 
@@ -124,7 +122,7 @@
 }
 
 .Function-Favorite .About-Favorite-Text {
-	// display: inline-block;
+	display: inline-block;
 	font-size: 20px;
 	text-align: center;
 	margin-left: 5%;
@@ -146,18 +144,19 @@
 
 .Function-Comment .About-Comment-Text {
 	display: inline-block;
-	font-size: 20px;
+	font-size: 2rem;
 	text-align: center;
 	margin-left: 9%;
 	padding: 5px;
-}
-
-.About-Comment-Text {
 	line-height: 30px;
 	background-color: rgba( 255, 241, 0, 0.60 );
 	color: black;
 	white-space: nowrap;
 	letter-spacing: 0.1em;
+}
+
+.About-Comment-Text p {
+	font-size: 2rem;
 }
 
 .About-Comment {
@@ -172,9 +171,9 @@
 	font-size: 20px;
 }
 
-.Function-Contact p {
+.Function-Contact .About-Contact-Text {
 	display: inline-block;
-	font-size: 20px;
+	vertical-align: top;
 	text-align: center;
 	margin-left: 10%;
 	padding: 5px;
@@ -186,7 +185,6 @@
 	color: black;
 	white-space: nowrap;
 	letter-spacing: 0.1em;
-	margin-top: 20px;
 }
 
 .About-User {
@@ -194,13 +192,13 @@
 }
 
 #sub-contain {
-	width: 100%;
 	display: flex;
+	justify-content: space-between;
 }
 
 #My-Profile-Main {
 	height: 70vh;
-	width: 1100px;
+	width: 100vw;
 	background-color: silver;
 	text-align: center;
 }
@@ -242,12 +240,21 @@
 .flexcontainer {
 	display: flex;
 	white-space: nowrap;
+	align-items: center;
+}
+.flow-item {
+	width: 100%;
+	padding-top: 100px;
 }
 
-.My-Hobby {
-	font-size: 0.5em;
-	letter-spacing: 0.1em;
-	padding-top: 30px;
+.Function-Favorite .About-Favorite-Text {
+	font-size: 2rem;
+}
+.Function-Comment .About-Comment-Text {
+	font-size: 2rem;
+}
+.Function-Contact .About-Contact-Text {
+	font-size: 2rem;
 }
 
 .My-Hobby-Title {
@@ -256,18 +263,6 @@
 
 .My-Qualification-Title {
 	text-align: center;
-}
-
-.My-Qualification {
-	font-size: 0.8em;
-	letter-spacing: 0.1em;
-	padding-top: 30px;
-}
-
-.My-Career {
-	padding-top: 30px;
-	font-size: 0.8em;
-	letter-spacing: 0.1em;
 }
 
 .My-Hobby-Text {
@@ -284,201 +279,190 @@
 	text-align: center;
 }
 
-#SNS {
-	position: relative;
-	width: 350px;
-	height: 500px;
-	background-color: red;
-}
-
-.My-SNS {
-	text-align: center;
-	padding-top: 3%;
-}
-
-.My-SNS-Title {
-	position: relative;
-	padding-left:  25px;
-	font-size: 30px;
-	letter-spacing: 0.1em;
-}
-
-.My-SNS-Title:before {
-	position: absolute;
-	content: '';
-	bottom: -3px;
-	left: 0;
-	width: 0;
-	height: 0;
-	border: none;
-	border-left: solid 15px transparent;
-	border-bottom: solid 15px black;
-}
-
-.My-SNS-Title:after {
-	position: absolute;
-	content: '';
-	bottom: -3px;
-	left: 10px;
-	width: 100%;
-	border-bottom: solid 3px black;
-}
-
-/* ボタン全体 */
-.flowbtn5{
-font-family:'Times New Roman',sans-serif;/* 好きなフォントに変えてね */
-border-radius:13px;
-position:relative;
-display:inline-block;
-width:50px;
-height:50px;
-font-size:33px;
-color:#fff!important;
-transition:.5s;
-text-decoration:none;
-}
-
-/* アイコンをど真ん中に*/
-.flowbtn5 i{
-position:absolute;
-top:50%;
-left:50%;
--ms-transform:translate(-50%,-50%);
--webkit-transform:translate(-50%,-50%);
-transform:translate(-50%,-50%);
-}
-
-/* Twitter */
-.fl_tw1{
-background:#55acee;
-}
-
-/* Facebook */
-.fl_fb1{
-background:#3b5998;
-}
-
-/* LINE */
-.fl_li1{
-background:#00c300;
-}
-
-/* Instagram紫グラデ背景色 */
-.insta_btn5 {
-background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-}
-
-/* Instagramアイコン調整 */
-.insta_btn5 .fa-instagram{
-font-size:40px;
-}
-
-/* アイコンボタン下テキスト調整 */
-.flowbtn5 div{
-font-size:11px;
-color:#666;
-position:relative;
-top:45px;
-}
-
-/* アイコンボタンにマウスホバーした時の指定*/
-.flowbtn5:hover{
--webkit-transform:translateY(-5px);
--ms-transform:translateY(-5px);
-transform:translateY(-5px);
-text-decoration:none;
-}
-
-/* ulタグの内側余白を０にする */
-ul.snsbtniti{
-padding:0!important;
-list-style: none;
-}
-
-/* アイコンボタン全体の位置 */
-.snsbtniti{
-// display:flex;
-// flex-flow:row wrap;
-// justify-content:space-around;
-}
-
-/* アイコンボタン同士の余白調整 */
-.snsbtniti li{
-	flex:0 0 33%;
-	text-align:center!important;
-	list-style: none;
-}
-
-.Instagram {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-}
-
-.Twitter {
-	position: absolute;
-	top: 20%;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	margin: auto;
-}
-
-.Facebook {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-}
-
-/* 960px〜1279px：小型PC
------------------------------- */
-@media screen and (min-width:960px) and (max-width:1279px) {
-
-
-}
-
-/* 600px〜959px：タブレット
------------------------------- */
-@media screen and (min-width:600px) and (max-width:959px) {
-
-
-}
-
-
-/* 480px〜599px：SP横
------------------------------- */
-@media screen and (min-width:480px) and (max-width:599px) {
-
-
-}
-
-
-/* 〜479px：スマートフォン縦
------------------------------- */
-@media screen and (max-width:479px) {
-	* {
- 	 margin: 0px;
- 	 padding: 0px;
- 	 box-sizing: border-box;
-  }
-
-	.About-img {
-		width: 200px;
-		height: 300px;
-	}
-  .Tabihama-Title-Text {
- 	  color: blue;
-  }
-
-  .flexcontainer {
- 	  flex-direction: column;
- 	  align-items: center;
-  }
-  .Function-Favorite .About-Favorite-Text {
- 	  font-size: 1rem;
-  }
-  .Function-Comment .About-Comment-Text {
- 	  font-size: 15px;
-  }
-}
+// #SNS {
+// 	position: relative;
+// 	width: 350px;
+// 	height: 500px;
+// 	background-color: red;
+// }
+//
+// .My-SNS {
+// 	text-align: center;
+// 	padding-top: 3%;
+// }
+//
+// .My-SNS-Title {
+// 	position: relative;
+// 	padding-left:  25px;
+// 	font-size: 30px;
+// 	letter-spacing: 0.1em;
+// }
+//
+// .My-SNS-Title:before {
+// 	position: absolute;
+// 	content: '';
+// 	bottom: -3px;
+// 	left: 0;
+// 	width: 0;
+// 	height: 0;
+// 	border: none;
+// 	border-left: solid 15px transparent;
+// 	border-bottom: solid 15px black;
+// }
+//
+// .My-SNS-Title:after {
+// 	position: absolute;
+// 	content: '';
+// 	bottom: -3px;
+// 	left: 10px;
+// 	width: 100%;
+// 	border-bottom: solid 3px black;
+// }
+//
+// /* ボタン全体 */
+// .flowbtn5{
+// font-family:'Times New Roman',sans-serif;/* 好きなフォントに変えてね */
+// border-radius:13px;
+// position:relative;
+// display:inline-block;
+// width:50px;
+// height:50px;
+// font-size:33px;
+// color:#fff!important;
+// transition:.5s;
+// text-decoration:none;
+// }
+//
+// /* アイコンをど真ん中に*/
+// .flowbtn5 i{
+// position:absolute;
+// top:50%;
+// left:50%;
+// -ms-transform:translate(-50%,-50%);
+// -webkit-transform:translate(-50%,-50%);
+// transform:translate(-50%,-50%);
+// }
+//
+// /* Twitter */
+// .fl_tw1{
+// background:#55acee;
+// }
+//
+// /* Facebook */
+// .fl_fb1{
+// background:#3b5998;
+// }
+//
+// /* LINE */
+// .fl_li1{
+// background:#00c300;
+// }
+//
+// /* Instagram紫グラデ背景色 */
+// .insta_btn5 {
+// background:-webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+// background:linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+// }
+//
+// /* Instagramアイコン調整 */
+// .insta_btn5 .fa-instagram{
+// font-size:40px;
+// }
+//
+// /* アイコンボタン下テキスト調整 */
+// .flowbtn5 div{
+// font-size:11px;
+// color:#666;
+// position:relative;
+// top:45px;
+// }
+//
+// /* アイコンボタンにマウスホバーした時の指定*/
+// .flowbtn5:hover{
+// -webkit-transform:translateY(-5px);
+// -ms-transform:translateY(-5px);
+// transform:translateY(-5px);
+// text-decoration:none;
+// }
+//
+// /* ulタグの内側余白を０にする */
+// ul.snsbtniti{
+// padding:0!important;
+// list-style: none;
+// }
+//
+// /* アイコンボタン全体の位置 */
+// .snsbtniti{
+// // display:flex;
+// // flex-flow:row wrap;
+// // justify-content:space-around;
+// }
+//
+// /* アイコンボタン同士の余白調整 */
+// .snsbtniti li{
+// 	flex:0 0 33%;
+// 	text-align:center!important;
+// 	list-style: none;
+// }
+//
+// .Instagram {
+// 	position: absolute;
+// 	left: 0;
+// 	bottom: 0;
+// }
+//
+// .Twitter {
+// 	position: absolute;
+// 	top: 20%;
+// 	bottom: 0;
+// 	left: 0;
+// 	right: 0;
+// 	margin: auto;
+// }
+//
+// .Facebook {
+// 	position: absolute;
+// 	right: 0;
+// 	bottom: 0;
+// }
+//
+// /* 960px〜1279px：小型PC
+// ------------------------------ */
+// @media screen and (min-width:960px) and (max-width:1279px) {
+//
+//
+// }
+//
+// /* 600px〜959px：タブレット
+// ------------------------------ */
+// @media screen and (min-width:600px) and (max-width:959px) {
+//
+//
+// }
+//
+//
+// /* 480px〜599px：SP横
+// ------------------------------ */
+// @media screen and (min-width:480px) and (max-width:599px) {
+//
+//
+// }
+//
+//
+// /* 〜479px：スマートフォン縦
+// ------------------------------ */
+// @media screen and (max-width:479px) {
+// 	* {
+//  	 margin: 0px;
+//  	 padding: 0px;
+//  	 box-sizing: border-box;
+//   }
+//
+// 	.About-img {
+// 		width: 200px;
+// 		height: 300px;
+// 	}
+//   .Tabihama-Title-Text {
+//  	  color: blue;
+//   }
+// }
