@@ -1,7 +1,7 @@
 # TABIHAMA
  
 "TABIHAMA" is a travel introduction and suggestion site for people who like to travel and plan trips with Ruby on Rails.
-([TABIHAMA」は、Ruby on Railsを使用した旅好きや旅行を計画している人向けの旅行紹介&提案サイトです。)
+(「TABIHAMA」は、Ruby on Railsを使用した旅好きや旅行を計画している人向けの旅行紹介&提案サイトです。)
 
 # DEMO
 
