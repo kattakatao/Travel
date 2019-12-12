@@ -4,7 +4,6 @@
 (「TABIHAMA」は、Ruby on Railsを使用した旅好きや旅行を計画している人向けの旅行紹介&提案サイトです。)
 
 # DEMO
-(https://user-images.githubusercontent.com/53547887/70392589-e0bf4e00-1a24-11ea-849e-32b77af1e8c1.png")
  
 # Features
  
