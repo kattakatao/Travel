@@ -16,29 +16,29 @@
 
 # 使用Gem
 
- # 画像アップロード機能
-  gem "refile", require: "refile/rails", github: 'manfe/refile'
+ ## 画像アップロード機能
+  gem "refile", require: "refile/rails", github: 'manfe/refile',
   gem "refile-mini_magick"
 
- # ページネーション機能
+ ## ページネーション機能
   gem 'kaminari', '~> 1.1.1'
  
- # 検索機能
+ ## 検索機能
   gem 'ransack'
 
- # 新規登録、ログイン機能
-  gem 'devise'
-  gem 'omniauth'
+ ## 新規登録、ログイン機能
+  gem 'devise',
+  gem 'omniauth',
   gem 'omniauth-facebook'
 
- # .env
+ ## .env
   gem 'dotenv-rails'
 
- # その他
-  gem 'bootstrap-sass', '~> 3.3.6'
-  gem "jquery-rails"
-  gem 'font-awesome-sass'
-  gem 'json'
+ ## その他
+  gem 'bootstrap-sass', '~> 3.3.6',
+  gem "jquery-rails",
+  gem 'font-awesome-sass',
+  gem 'json',
   gem 'pry-rails'
 
 # Installation
