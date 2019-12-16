@@ -17,7 +17,7 @@
 # Installation
  
  ```bash
-$ rails new app name(アプリケーション名)
+$ rails new appname(アプリケーション名)
 ```
  
 # Usage
