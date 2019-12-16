@@ -14,6 +14,20 @@
 * Ruby 2.5.5
 * Rails 5.2.3
 
+# Installation
+ 
+ ```bash
+$ rails new app nemme(アプリケーション名)
+```
+ 
+# Usage
+ 
+```bash
+git clone https://github.com/kattakatao/Travel.git
+cd Travel
+rails s -b 0.0.0.0
+```
+
 # 使用Gem
 
  ## 画像アップロード機能
@@ -41,17 +55,6 @@
   gem 'json',
   gem 'pry-rails'
 
-# Installation
- 
- 
-# Usage
- 
-```bash
-git clone https://github.com/kattakatao/Travel.git
-cd Travel
-rails s -b 0.0.0.0
-```
- 
 # Note
  
 # Author
