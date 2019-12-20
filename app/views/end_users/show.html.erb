@@ -17,16 +17,16 @@
 
   <div class="like-end-user">
 	<p class="mypage-name">いいねした記事</p>
-	<% @c.each do |e| %>
-	<div class="comment_title"><%= link_to(post_path(e), class: "comment_title2", data: {"turbolinks" => false}) do %><%= Post.find(e).title %><% end %></div>
+	<% @end_user_like.each do |end_user_likes| %>
+	<div class="comment_title"><%= link_to(post_path(end_user_likes), class: "comment_title2", data: {"turbolinks" => false}) do %><%= Post.find(end_user_likes).title %><% end %></div>
   <% end %>
   </div>
 
 
   <div class="comment-end-user">
 	<p class="mypage-name">コメントした記事</p>
-  <% @a.each do |c| %>
-	<div class="comment_title"><%= link_to(post_path(c), class: "comment_title2", data: {"turbolinks" => false}) do %><%= Post.find(c).title %><% end %></div>
+  <% @end_user_comment.each do |end_user_comments| %>
+	<div class="comment_title"><%= link_to(post_path(end_user_comments), class: "comment_title2", data: {"turbolinks" => false}) do %><%= Post.find(end_user_comments).title %><% end %></div>
   <% end %>
 
   </div>
